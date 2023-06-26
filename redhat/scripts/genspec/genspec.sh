@@ -18,6 +18,7 @@ EXCLUDE_FILES=":(exclude,top).get_maintainer.conf \
 		:(exclude,top).gitattributes \
 		:(exclude,top).gitignore \
 		:(exclude,top).gitlab-ci.yml \
+		:(exclude,top).copr \
 		:(exclude,top)makefile \
 		:(exclude,top)Makefile.rhelver \
 		:(exclude,top)redhat \
@@ -61,6 +62,9 @@ test -f "$SOURCES/$SPECFILE" &&
 	s/%%SPECTARFILE_RELEASE%%/$SPECTARFILE_RELEASE/
 	s/%%SPECPACKAGE_NAME%%/$SPECPACKAGE_NAME/
 	s/%%SPECGEMINI%%/$SPECGEMINI/
+	s/%%ARKUPSTREAMBUILD%%/${UPSTREAMBUILD:-\%\{nil\}}/
+	s/%%ARKBUILD%%/$BUILD/
+	s/%%ARKDISTLOCALVERSION%%/$DISTLOCALVERSION/
 	s/%%SPECSELFTESTS_MUST_BUILD%%/$SPECSELFTESTS_MUST_BUILD/" "$SOURCES/$SPECFILE"
 test -n "$RHSELFTESTDATA" && test -f "$SOURCES/$SPECFILE" && sed -i -e "
 	/%%SPECCHANGELOG%%/r $SOURCES/$SPECCHANGELOG

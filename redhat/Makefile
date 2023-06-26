@@ -181,7 +181,9 @@ endif
 UPSTREAM:=$(shell $(GIT) rev-parse -q --verify origin/$(UPSTREAM_BRANCH) || \
             $(GIT) rev-parse -q --verify $(UPSTREAM_BRANCH))
 
-ifneq ("$(wildcard $(TOPDIR)/localversion-next)", "")
+ifdef STABLERC_MARKER
+  # nothing to do
+else ifneq ("$(wildcard $(TOPDIR)/localversion-next)", "")
   # we are building linux-next
   MARKER:=$(shell $(GIT) describe $(UPSTREAM))
   # The merge window is weird because the actual versioning hasn't
@@ -226,7 +228,12 @@ else ifeq ($(VERSION_ON_UPSTREAM),1)
     else
       # Obtain the date that HEAD was committed (not the snapshot commit).
       HEAD_DATE:=$(shell $(GIT) show -s --format=%cd --date=format:%Y%m%d $(HEAD))
-      UPSTREAMBUILD:=$(UPSTREAMBUILD)$(HEAD_DATE)git$(MARKER).
+      # UPSTREAMBUILD:=$(UPSTREAMBUILD)$(HEAD_DATE)git$(MARKER).
+      #
+      # For vanilla builds, use less characters of the sha1sum to avoid lenght restrictions;
+      # to ensure we still look fresher to rpm-vercmp, use "gt" instead of "git".
+      SHORTERMARKER:=$(shell echo $(MARKER) | cut -c 1-8)
+      UPSTREAMBUILD:=$(UPSTREAMBUILD)$(HEAD_DATE)gt$(SHORTERMARKER).
     endif
     UPSTREAM_TARBALL_NAME:=$(patsubst v%,%,$(_TAG))
   endif
