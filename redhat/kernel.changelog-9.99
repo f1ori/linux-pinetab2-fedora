@@ -1,3 +1,8 @@
+* Sat Sep 02 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.1-50.vanilla]
+- import ark-infra from ark-infra-stable-6.5 (3e4245bba1e) (Thorsten Leemhuis)
+- Linux v6.5.1
+Resolves: 
+
 * Mon Aug 28 2023 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.5.0-58.eln130]
 - redhat: Fix UKI install with systemd >= 254 (Vitaly Kuznetsov)
 - redhat: Use named parameters for kernel_variant_posttrans()/kernel_variant_preun() (Vitaly Kuznetsov)
