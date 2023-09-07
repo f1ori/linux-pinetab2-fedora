@@ -1,3 +1,7 @@
+* Thu Sep 07 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.2-50.vanilla]
+- import ark-infra from ark-infra-stable-6.5 (8a37e3ed9a0) (Thorsten Leemhuis)
+Resolves: 
+
 * Wed Sep 06 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.5.2-0]
 - Move squashfs to kernel-modules-core (Justin M. Forbes)
 - Add TPM bug to BugsFixed (Justin M. Forbes)
