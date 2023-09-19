@@ -1,5 +1,8 @@
-* Tue Sep 19 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.4-50.vanilla]
-- import ark-infra from ark-infra-stable-6.5 (bb57b2bf138) (Thorsten Leemhuis)
+* Tue Sep 19 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.5.4-0]
+- Add F38 and F37 as release targets (Justin M. Forbes)
+- Add NFS bug fix for 6.5.4 (Justin M. Forbes)
+- selinux: fix handling of empty opts in selinux_fs_context_submount() (Ondrej Mosnacek)
+- Turn off appletalk for fedora (Justin M. Forbes)
 - Linux v6.5.4
 Resolves: 
 
