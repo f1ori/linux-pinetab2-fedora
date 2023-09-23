@@ -1,3 +1,8 @@
+* Sat Sep 23 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.5-50.vanilla]
+- import ark-infra from ark-infra-stable-6.5 (02df4dc0673) (Thorsten Leemhuis)
+- Linux v6.5.5
+Resolves: 
+
 * Tue Sep 19 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.5.4-0]
 - Add F38 and F37 as release targets (Justin M. Forbes)
 - Add NFS bug fix for 6.5.4 (Justin M. Forbes)
