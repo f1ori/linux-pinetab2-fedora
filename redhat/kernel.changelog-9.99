@@ -1,5 +1,12 @@
-* Sat Sep 23 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.5-50.vanilla]
-- import ark-infra from ark-infra-stable-6.5 (02df4dc0673) (Thorsten Leemhuis)
+* Sat Sep 23 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.5.5-0]
+- iommu/apple-dart: Handle DMA_FQ domains in attach_dev() (Hector Martin)
+- Note fix for atomic locking in BugsFixed (Justin M. Forbes)
+- locking/atomic: scripts: fix fallback ifdeffery (Mark Rutland)
+- redhat: spec: Fix typo for kernel_variant_preun for 16k-debug flavor (Neal Gompa)
+- Fix installreq for UKI (Justin M. Forbes)
+- Add btrfs bug to BugsFixed for 6.5.5 (Justin M. Forbes)
+- btrfs: adjust overcommit logic when very close to full (Josef Bacik)
+- btrfs: properly report 0 avail for very full file systems (Josef Bacik)
 - Linux v6.5.5
 Resolves: 
 
