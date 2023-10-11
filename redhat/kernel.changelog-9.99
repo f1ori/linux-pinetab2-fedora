@@ -1,3 +1,7 @@
+* Wed Oct 11 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.7-50.vanilla]
+- import ark-infra from ark-infra-stable-6.5 (d6034edc039) (Thorsten Leemhuis)
+Resolves: 
+
 * Tue Oct 10 2023 Augusto Caringi <acaringi@redhat.com> [6.5.7-0]
 - common: aarch64: enable CONFIG_ARM64_ERRATUM_2966298 (Augusto Caringi)
 - Linux v6.5.7
