@@ -1,5 +1,4 @@
-* Fri Oct 20 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.8-50.vanilla]
-- import ark-infra from ark-infra-stable-6.5 (d6034edc039) (Thorsten Leemhuis)
+* Fri Oct 20 2023 Augusto Caringi <acaringi@redhat.com> [6.5.8-0]
 - Linux v6.5.8
 Resolves: 
 
