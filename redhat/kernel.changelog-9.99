@@ -1,3 +1,8 @@
+* Tue Nov 07 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.1-0.rc1.51.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (b84dfb68cc1) (Thorsten Leemhuis)
+- Linux v6.6.1-0.rc1
+Resolves: 
+
 * Tue Oct 31 2023 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.6.0-1]
 - Reset RHEL_RELEASE for rebase (Justin M. Forbes)
 - [Scheduled job] Catch config mismatches early during upstream merge (Don Zickus)
