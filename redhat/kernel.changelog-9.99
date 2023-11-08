@@ -1,8 +1,3 @@
-* Thu Nov 02 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.10-50.vanilla]
-- import ark-infra from ark-infra-stable-6.5 (399e286b4cb) (Thorsten Leemhuis)
-- Linux v6.5.10
-Resolves: 
-
 * Wed Oct 25 2023 Augusto Caringi <acaringi@redhat.com> [6.5.9-0]
 - Updated Fedora configs (Justin M. Forbes)
 - Add UFSHCD bug to BugsFixed (Justin M. Forbes)
