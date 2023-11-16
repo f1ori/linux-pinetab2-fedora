@@ -1,3 +1,8 @@
+* Thu Nov 16 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.2-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (62641cc41d1) (Thorsten Leemhuis)
+- Linux v6.6.2-0.rc1
+Resolves: 
+
 * Wed Nov 08 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.1-0]
 - drivers/firmware: skip simpledrm if nvidia-drm.modeset=1 is set (Javier Martinez Canillas)
 - Added required files for rebase (Augusto Caringi)
