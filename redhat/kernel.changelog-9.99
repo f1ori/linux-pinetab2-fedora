@@ -1,3 +1,8 @@
+* Mon Nov 20 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.0-0.0.next.20231120.21.vanilla]
+- import ark-infra from ark-infra-next-latest (f910f51d19c) (Thorsten Leemhuis)
+- Linux v6.7.0-0.0.next.20231120
+Resolves: 
+
 * Sun Nov 19 2023 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.7.0-0.rc1.037266a5f723.21]
 - Linux v6.7.0-0.rc1.037266a5f723
 Resolves: 
