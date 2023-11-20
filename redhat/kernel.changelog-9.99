@@ -1,6 +1,9 @@
-* Wed Nov 08 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.5.11-50.vanilla]
-- import ark-infra from ark-infra-stable-6.5 (399e286b4cb) (Thorsten Leemhuis)
+* Wed Nov 08 2023 Augusto Caringi <acaringi@redhat.com> [6.5.11-0]
 - Linux v6.5.11
+Resolves: 
+
+* Thu Nov 02 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.5.10-0]
+- Linux v6.5.10
 Resolves: 
 
 * Wed Oct 25 2023 Augusto Caringi <acaringi@redhat.com> [6.5.9-0]
