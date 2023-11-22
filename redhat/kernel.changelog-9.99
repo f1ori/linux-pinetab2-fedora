@@ -1,3 +1,8 @@
+* Wed Nov 22 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.0-0.0.next.20231122.22.vanilla]
+- import ark-infra from ark-infra-next-latest (233ca9e5cb2) (Thorsten Leemhuis)
+- Linux v6.7.0-0.0.next.20231122
+Resolves: 
+
 * Mon Nov 20 2023 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.7.0-0.rc2.22]
 - Fix s390 zfcpfdump bpf build failures for cgroups (Don Zickus)
 - Linux v6.7.0-0.rc2
