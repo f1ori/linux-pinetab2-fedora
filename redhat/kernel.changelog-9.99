@@ -1,3 +1,8 @@
+* Thu Nov 23 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.0-0.0.next.20231123.23.vanilla]
+- import ark-infra from ark-infra-next-latest (a6062619f9f) (Thorsten Leemhuis)
+- Linux v6.7.0-0.0.next.20231123
+Resolves: 
+
 * Wed Nov 22 2023 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.7.0-0.rc2.c2d5304e6c64.23]
 - redhat/configs: Move IOMMUFD to common (Alex Williamson)
 - redhat: Really remove cpupower files (Prarit Bhargava)
