@@ -1,3 +1,8 @@
+* Sun Nov 26 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.3-0.rc3.50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (768cdd0001c) (Thorsten Leemhuis)
+- Linux v6.6.3-0.rc3
+Resolves: 
+
 * Mon Nov 20 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.2-0]
 - Add bug for AMD ACPI alarm (Justin M. Forbes)
 - rtc: cmos: Use ACPI alarm for non-Intel x86 systems too (Mario Limonciello)
