@@ -1,5 +1,13 @@
-* Tue Nov 28 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.3-50.vanilla]
-- import ark-infra from ark-infra-stable-6.6 (768cdd0001c) (Thorsten Leemhuis)
+* Tue Nov 28 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.3-0]
+- Add BugsFixed for 6.6.3 (Justin M. Forbes)
+- Update BugsFixed (Justin M. Forbes)
+- Turn on USB_DWC3 for Fedora (rhbz 2250955) (Justin M. Forbes)
+- Revert "netfilter: nf_tables: remove catchall element in GC sync path" (Justin M. Forbes)
+- More BugsFixed (Justin M. Forbes)
+- netfilter: nf_tables: remove catchall element in GC sync path (Pablo Neira Ayuso)
+- frop the build number back to 200 for fedora-srpm.sh (Justin M. Forbes)
+- ACPI: video: Use acpi_device_fix_up_power_children() (Hans de Goede)
+- ACPI: PM: Add acpi_device_fix_up_power_children() function (Hans de Goede)
 - Linux v6.6.3
 Resolves: 
 
