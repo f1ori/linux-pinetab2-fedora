@@ -1,7 +1,3 @@
-* Wed Nov 29 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.3-50.vanilla]
-- import ark-infra from ark-infra-stable-6.6 (6fbde0af1f8) (Thorsten Leemhuis)
-Resolves: 
-
 * Tue Nov 28 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.3-0]
 - Add BugsFixed for 6.6.3 (Justin M. Forbes)
 - Update BugsFixed (Justin M. Forbes)
