@@ -1,3 +1,8 @@
+* Tue Dec 05 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.5-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (98274cd739d) (Thorsten Leemhuis)
+- Linux v6.6.5-0.rc1
+Resolves: 
+
 * Sun Dec 03 2023 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.4-0]
 - redhat: Fix macro for kernel-uki-virt flavor (Neal Gompa)
 - Change the uki reqs for Fedora (Justin M. Forbes)
