@@ -1,3 +1,8 @@
+* Wed Dec 20 2023 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.8-50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (b3d43ae4328) (Thorsten Leemhuis)
+- Linux v6.6.8
+Resolves: 
+
 * Wed Dec 13 2023 Augusto Caringi <acaringi@redhat.com> [6.6.7-0]
 - Add rhbz#2253632 rhbz#2253633 to BugsFixed (Justin M. Forbes)
 - Turn on DRM_ACCEL drivers for Fedora (Justin M. Forbes)
