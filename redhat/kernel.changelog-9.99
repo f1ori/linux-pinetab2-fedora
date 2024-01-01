@@ -1,3 +1,8 @@
+* Mon Jan 01 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.9-50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (bf393790706) (Thorsten Leemhuis)
+- Linux v6.6.9
+Resolves: 
+
 * Wed Dec 20 2023 Augusto Caringi <acaringi@redhat.com> [6.6.8-0]
 - Add BugsFixed entries for rhbz#2254797 and #rhbz2254704 (Justin M. Forbes)
 - Add support for various laptops using CS35L41 HDA without _DSD (Stefan Binding)
