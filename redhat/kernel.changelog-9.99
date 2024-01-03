@@ -1,3 +1,8 @@
+* Wed Jan 03 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.0-0.0.next.20240103.62.vanilla]
+- import ark-infra from ark-infra-next-latest (bc46a540432) (Thorsten Leemhuis)
+- Linux v6.7.0-0.0.next.20240103
+Resolves: 
+
 * Tue Jan 02 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.7.0-0.rc8.62]
 - redhat: do not compress the full kernel changelog in the src.rpm (Herton R. Krzesinski)
 Resolves: 
