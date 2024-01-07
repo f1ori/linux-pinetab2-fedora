@@ -1,3 +1,8 @@
+* Sun Jan 07 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.0-0.rc8.20240107gt52b1853b.66.vanilla]
+- import ark-infra from ark-infra-mainline-latest (7cf595fbc50) (Thorsten Leemhuis)
+- Linux v6.7.0-0.rc8.20240107gt52b1853b
+Resolves: 
+
 * Sat Jan 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.7.0-0.rc8.95c8a35f1c01.66]
 - fedora: arm64: enable ethernet on newer TI industrial (Peter Robinson)
 - fedora: arm64: Disable VIDEO_IMX_MEDIA (Peter Robinson)
