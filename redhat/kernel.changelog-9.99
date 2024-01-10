@@ -1,3 +1,8 @@
+* Wed Jan 10 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240110.1.vanilla]
+- import ark-infra from ark-infra-next-latest (eec7800d9a1) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240110
+Resolves: 
+
 * Tue Jan 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.9f8413c4a66f.1]
 - Reset RHEL_RELEASE for 6.8 series (Justin M. Forbes)
 - common: cleanup MX3_IPU (Peter Robinson)
