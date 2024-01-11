@@ -1,3 +1,8 @@
+* Thu Jan 11 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240111.4.vanilla]
+- import ark-infra from ark-infra-next-latest (6d26ebe1912) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240111
+Resolves: 
+
 * Wed Jan 10 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.ab27740f7665.4]
 - random: replace import_single_range() with import_ubuf() (Justin M. Forbes)
 Resolves: 
