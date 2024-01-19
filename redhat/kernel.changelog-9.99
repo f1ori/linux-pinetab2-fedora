@@ -1,3 +1,8 @@
+* Fri Jan 19 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc0.20240119gt9d1694dc.8.vanilla]
+- import ark-infra from ark-infra-mainline-latest (5bb5bbdf5f4) (Thorsten Leemhuis)
+- Linux v6.8.0-0.rc0.20240119gt9d1694dc
+Resolves: 
+
 * Thu Jan 18 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.296455ade1fd.8]
 - Turn on IAA_CRYPTO_STATS for Fedora (Justin M. Forbes)
 - Fix up manual merge error in security.h (Justin M. Forbes)
