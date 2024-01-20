@@ -2789,12 +2789,6 @@ chmod +x tools/perf/check-headers.sh
 %{perf_make} DESTDIR=$RPM_BUILD_ROOT all
 %endif
 
-%if %{with_libperf}
-%global libperf_make \
-  %{__make} %{?make_opts} EXTRA_CFLAGS="${RPM_OPT_FLAGS}" LDFLAGS="%{__global_ldflags}" %{?cross_opts} -C tools/lib/perf V=1
-%{libperf_make} DESTDIR=$RPM_BUILD_ROOT
-%endif
-
 %global tools_make \
   CFLAGS="${RPM_OPT_FLAGS}" LDFLAGS="%{__global_ldflags}" %{make} %{?make_opts}
 
@@ -3642,7 +3636,7 @@ fi\
 
 %ifarch %{cpupowerarchs}
 %files -n %{package_name}-tools-libs
-%{_libdir}/libcpupower.so.0
+%{_libdir}/libcpupower.so.1
 %{_libdir}/libcpupower.so.0.0.1
 
 %files -n %{package_name}-tools-libs-devel
