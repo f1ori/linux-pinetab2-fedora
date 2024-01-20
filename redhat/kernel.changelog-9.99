@@ -1,3 +1,8 @@
+* Sat Jan 20 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.13-50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (7d8f7a9a739) (Thorsten Leemhuis)
+- Linux v6.6.13
+Resolves: 
+
 * Mon Jan 15 2024 Augusto Caringi <acaringi@redhat.com> [6.6.12-0]
 - Add CVE Fixes to BugsFixed for 6.6.12 (Justin M. Forbes)
 - ida: Fix crash in ida_free when the bitmap is empty (Matthew Wilcox (Oracle))
