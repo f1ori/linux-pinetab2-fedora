@@ -1,10 +1,11 @@
-* Sun Jan 21 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc0.20240121gt7a396820.10.vanilla]
-- import ark-infra from ark-infra-mainline-latest (81c5ee6df70) (Thorsten Leemhuis)
-- Linux v6.8.0-0.rc0.20240121gt7a396820
+* Sun Jan 21 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.7a396820222d.11]
+- Remove CONFIG_NET_EMATCH_STACK file for RHEL (Justin M. Forbes)
 Resolves: 
 
-* Sat Jan 20 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.9d1694dc91ce.10]
-- Remove CONFIG_NET_EMATCH_STACK file for RHEL (Justin M. Forbes)
+* Sun Jan 21 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.7a396820222d.10]
+- CONFIG_NETFS_SUPPORT should be m after the merge (Justin M. Forbes)
+- Turn FSCACHE and NETFS from m to y in pending (Justin M. Forbes)
+- Linux v6.8.0-0.rc0.7a396820222d
 Resolves: 
 
 * Fri Jan 19 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc0.9d1694dc91ce.9]
