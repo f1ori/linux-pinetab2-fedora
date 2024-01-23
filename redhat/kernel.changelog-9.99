@@ -1,3 +1,8 @@
+* Tue Jan 23 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240123.12.vanilla]
+- import ark-infra from ark-infra-next-latest (ec4cc296d8b) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240123
+Resolves: 
+
 * Mon Jan 22 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc1.12]
 - Remove CONFIG_NET_EMATCH_STACK file for RHEL (Justin M. Forbes)
 Resolves: 
