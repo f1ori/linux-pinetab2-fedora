@@ -1154,13 +1154,11 @@ This package provides debug information for the perf python bindings.
 %if %{with_libperf}
 %package -n libperf
 Summary: The perf library from kernel source
-License: GPL-2.0-only AND (LGPL-2.1-only OR BSD-2-Clause)
 %description -n libperf
 This package contains the kernel source perf library.
 
 %package -n libperf-devel
 Summary: Developement files for the perf library from kernel source
-License: GPL-2.0-only AND (LGPL-2.1-only OR BSD-2-Clause)
 %description -n libperf-devel
 This package includes libraries and header files needed for development
 of applications which use perf library from kernel source.
@@ -1246,14 +1244,25 @@ analysing the logical and timing behavior of Linux.
 
 %if %{with_bpftool}
 
+%if 0%{?fedora}
+# bpftoolverion doesn't bump with stable updates so let's stick with
+# upstream kernel version for the package name. We still get correct
+# output with bpftool -V.
+%define bpftoolversion  %specrpmversion
+%else
+%define bpftoolversion %%SPECBPFTOOLVERSION%%
+%endif
+
 %package -n bpftool
 Summary: Inspection and simple manipulation of eBPF programs and maps
+Version: %{bpftoolversion}
 %description -n bpftool
 This package contains the bpftool, which allows inspection and simple
 manipulation of eBPF programs and maps.
 
 %package -n bpftool-debuginfo
 Summary: Debug information for package bpftool
+Version: %{bpftoolversion}
 Group: Development/Debug
 Requires: %{name}-debuginfo-common-%{_target_cpu} = %{specrpmversion}-%{release}
 AutoReqProv: no
@@ -3075,6 +3084,8 @@ rm -rf %{buildroot}%{_libdir}/traceevent
 
 %if %{with_libperf}
 %{libperf_make} DESTDIR=%{buildroot} prefix=%{_prefix} libdir=%{_libdir} install install_headers
+# This is installed on some arches and we don't want to ship it
+rm -rf %{buildroot}%{_libdir}/libperf.a
 %endif
 
 %if %{with_tools}
