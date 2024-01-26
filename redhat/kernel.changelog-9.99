@@ -1,5 +1,4 @@
-* Sat Jan 20 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.13-50.vanilla]
-- import ark-infra from ark-infra-stable-6.6 (7d8f7a9a739) (Thorsten Leemhuis)
+* Sat Jan 20 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.13-0]
 - Linux v6.6.13
 Resolves: 
 
