@@ -1,3 +1,8 @@
+* Fri Jan 26 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.2-50.vanilla]
+- import ark-infra from ark-infra-stable-6.7 (78a57e55c6e) (Thorsten Leemhuis)
+- Linux v6.7.2
+Resolves: 
+
 * Sat Jan 20 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.7.1-0]
 - Fix up requires for UKI (Justin M. Forbes)
 - Fix up libperf install (Justin M. Forbes)
