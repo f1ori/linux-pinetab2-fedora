@@ -1,3 +1,8 @@
+* Wed Jan 31 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc2.20240131gt2a6526c4.20.vanilla]
+- import ark-infra from ark-infra-mainline-latest (c29b2b0011f) (Thorsten Leemhuis)
+- Linux v6.8.0-0.rc2.20240131gt2a6526c4
+Resolves: 
+
 * Tue Jan 30 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc2.861c0981648f.20]
 - Remove separate license tag for libperf (Justin M. Forbes)
 - Don't use upstream bpftool version for Fedora package (Justin M. Forbes)
