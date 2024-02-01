@@ -1,3 +1,8 @@
+* Thu Feb 01 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240201.21.vanilla]
+- import ark-infra from ark-infra-next-latest (e46d68c10a4) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240201
+Resolves: 
+
 * Wed Jan 31 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc2.1bbb19b6eb1b.21]
 - Remove defines forcing tools on, they override cmdline (Justin M. Forbes)
 - Remove separate license tag for libperf (Justin M. Forbes)
