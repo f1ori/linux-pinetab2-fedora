@@ -1,3 +1,7 @@
+* Thu Feb 01 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.6.15-50.vanilla]
+- import ark-infra from ark-infra-stable-6.6 (1f12e90a9c8) (Thorsten Leemhuis)
+Resolves: 
+
 * Wed Jan 31 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.6.15-0]
 - Config update for stable backport (Justin M. Forbes)
 - Linux v6.6.15
