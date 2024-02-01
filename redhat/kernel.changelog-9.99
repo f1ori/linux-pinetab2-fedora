@@ -1,5 +1,6 @@
-* Fri Jan 26 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.2-50.vanilla]
-- import ark-infra from ark-infra-stable-6.7 (78a57e55c6e) (Thorsten Leemhuis)
+* Fri Jan 26 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.7.2-0]
+- redhat: spec: Fix update_scripts run for CentOS builds (Neal Gompa)
+- BPF Tool versioning seems incompatible with stable Fedroa (Justin M. Forbes)
 - Linux v6.7.2
 Resolves: 
 
