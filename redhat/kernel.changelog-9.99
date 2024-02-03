@@ -1,3 +1,8 @@
+* Sat Feb 03 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.4-0.rc2.50.vanilla]
+- import ark-infra from ark-infra-stable-6.7 (070cef90f9e) (Thorsten Leemhuis)
+- Linux v6.7.4-0.rc2
+Resolves: 
+
 * Wed Jan 31 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.7.3-0]
 - Config update for stable backport (Justin M. Forbes)
 - Add some more bugs to BugsFixed (Justin M. Forbes)
