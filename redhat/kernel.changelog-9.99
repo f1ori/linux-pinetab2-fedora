@@ -1,14 +1,15 @@
-* Fri Feb 02 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc2.20240202gt02153319.22.vanilla]
-- import ark-infra from ark-infra-mainline-latest (c654e2a5801) (Thorsten Leemhuis)
-- Linux v6.8.0-0.rc2.20240202gt02153319
-Resolves: 
-
-* Thu Feb 01 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc2.6764c317b6bb.22]
+* Fri Feb 02 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc2.021533194476.23]
+- tools/rv: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
+- tools/rtla: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
 - Remove defines forcing tools on, they override cmdline (Justin M. Forbes)
 - Remove separate license tag for libperf (Justin M. Forbes)
 - Don't use upstream bpftool version for Fedora package (Justin M. Forbes)
 - Don't ship libperf.a in libperf-devel (Justin M. Forbes)
 - add libperf packages and enable perf, libperf, tools and bpftool packages (Thorsten Leemhuis)
+Resolves: 
+
+* Fri Feb 02 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc2.021533194476.22]
+- Linux v6.8.0-0.rc2.021533194476
 Resolves: 
 
 * Thu Feb 01 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc2.6764c317b6bb.21]
