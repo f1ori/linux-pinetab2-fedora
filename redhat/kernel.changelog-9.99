@@ -1,11 +1,17 @@
-* Wed Feb 07 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc3.20240207gt6d280f4d.27.vanilla]
-- import ark-infra from ark-infra-mainline-latest (e83a91b55d4) (Thorsten Leemhuis)
-- Linux v6.8.0-0.rc3.20240207gt6d280f4d
-Resolves: 
-
-* Tue Feb 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc3.99bd3cb0d12e.27]
+* Wed Feb 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc3.6d280f4d760e.29]
+- DO NOT MERGE: Revert Fix cursor planes with virtualized drivers series (Justin M. Forbes)
 - tools/rv: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
 - tools/rtla: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
+Resolves: 
+
+* Wed Feb 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc3.6d280f4d760e.28]
+- gitlab-ci: merge ark-latest fixes when running ELN pipelines (Michael Hofmann)
+- gitlab-ci: use all arches for container image gating (Michael Hofmann)
+- Add new os-build targets: rt-devel and automotive-devel (Don Zickus)
+Resolves: 
+
+* Wed Feb 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc3.6d280f4d760e.27]
+- Linux v6.8.0-0.rc3.6d280f4d760e
 Resolves: 
 
 * Tue Feb 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc3.99bd3cb0d12e.26]
