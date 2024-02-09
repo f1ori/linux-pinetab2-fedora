@@ -1,3 +1,8 @@
+* Fri Feb 09 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240209.30.vanilla]
+- import ark-infra from ark-infra-next-latest (236f1731e50) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240209
+Resolves: 
+
 * Thu Feb 08 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc3.047371968ffc.30]
 - DO NOT MERGE: Revert Fix cursor planes with virtualized drivers series (Justin M. Forbes)
 - tools/rv: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
