@@ -1,3 +1,8 @@
+* Tue Feb 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240213.35.vanilla]
+- import ark-infra from ark-infra-next-latest (722fd14f3c7) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240213
+Resolves: 
+
 * Mon Feb 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc4.716f4aaa7b48.35]
 - tools/rv: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
 - tools/rtla: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
