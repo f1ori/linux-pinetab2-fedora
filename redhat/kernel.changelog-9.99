@@ -1,3 +1,8 @@
+* Tue Feb 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.5-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.7 (585bea69c52) (Thorsten Leemhuis)
+- Linux v6.7.5-0.rc1
+Resolves: 
+
 * Mon Feb 05 2024 Augusto Caringi <acaringi@redhat.com> [6.7.4-0]
 - Add keyboard resume bugfixes (Justin M. Forbes)
 - Input: atkbd - do not skip atkbd_deactivate() when skipping ATKBD_CMD_GETID (Hans de Goede)
