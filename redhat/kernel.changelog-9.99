@@ -1,3 +1,9 @@
+* Wed Feb 14 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc4.20240214gt7e90b5c2.36.vanilla]
+- import ark-infra from ark-infra-mainline-latest (67ea4ff849c) (Thorsten Leemhuis)
+- handle disable LIBBPF_DYNAMIC=1 better (Thorsten Leemhuis)
+- Linux v6.8.0-0.rc4.20240214gt7e90b5c2
+Resolves: 
+
 * Tue Feb 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc4.c664e16bb1ba.36]
 - tools/rv: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
 - tools/rtla: Fix Makefile compiler options for clang (Daniel Bristot de Oliveira)
