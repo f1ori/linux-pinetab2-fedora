@@ -1,3 +1,8 @@
+* Thu Feb 15 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240215.37.vanilla]
+- import ark-infra from ark-infra-next-latest (d1975d96cec) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240215
+Resolves: 
+
 * Wed Feb 14 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc4.7e90b5c295ec.37]
 - Flip secureboot signature order (Justin M. Forbes)
 Resolves: 
