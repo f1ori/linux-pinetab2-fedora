@@ -1,3 +1,8 @@
+* Sun Feb 18 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc4.20240218gtc02197fc.39.vanilla]
+- import ark-infra from ark-infra-mainline-latest (bd16c44849e) (Thorsten Leemhuis)
+- Linux v6.8.0-0.rc4.20240218gtc02197fc
+Resolves: 
+
 * Sat Feb 17 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc4.c1ca10ceffbb.39]
 - Add xe to drm module filters (Justin M. Forbes)
 - Turn off the DRM_XE_KUNIT_TEST for Fedora (Justin M. Forbes)
