@@ -1,3 +1,8 @@
+* Wed Feb 21 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.6-0.rc2.50.vanilla]
+- import ark-infra from ark-infra-stable-6.7 (3d4db9154cf) (Thorsten Leemhuis)
+- Linux v6.7.6-0.rc2
+Resolves: 
+
 * Sat Feb 17 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.7.5-0]
 - Backported some CVE fixes lets note them in BugsFixed (Justin M. Forbes)
 - selftests: openvswitch: Add validation for the recursion test (Aaron Conole)
