@@ -1,3 +1,8 @@
+* Thu Feb 22 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc5.20240222gt39133352.42.vanilla]
+- import ark-infra from ark-infra-mainline-latest (48e87d67962) (Thorsten Leemhuis)
+- Linux v6.8.0-0.rc5.20240222gt39133352
+Resolves: 
+
 * Wed Feb 21 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc5.9fc1ccccfd8d.42]
 - redhat/configs: For aarch64/RT, default kstack randomization off (Jeremy Linton)
 - redhat/Makefile: remove an unused target (Ondrej Mosnacek)
