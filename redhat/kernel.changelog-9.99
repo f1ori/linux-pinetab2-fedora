@@ -1,3 +1,8 @@
+* Tue Feb 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc6.20240227gt45ec2f5f.49.vanilla]
+- import ark-infra from ark-infra-mainline-latest (59a0a136d08) (Thorsten Leemhuis)
+- Linux v6.8.0-0.rc6.20240227gt45ec2f5f
+Resolves: 
+
 * Mon Feb 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc6.49]
 - Add libperf-debuginfo subpackage (Justin M. Forbes)
 Resolves: 
