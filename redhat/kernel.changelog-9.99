@@ -1,3 +1,8 @@
+* Thu Feb 29 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.0.next.20240229.51.vanilla]
+- import ark-infra from ark-infra-next-latest (7b923c20c76) (Thorsten Leemhuis)
+- Linux v6.8.0-0.0.next.20240229
+Resolves: 
+
 * Wed Feb 28 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc6.cf1182944c7c.51]
 - Revert "net: bump CONFIG_MAX_SKB_FRAGS to 45" (Marcelo Ricardo Leitner)
 - Add libperf-debuginfo subpackage (Justin M. Forbes)
