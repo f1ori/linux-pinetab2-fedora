@@ -1,5 +1,5 @@
-* Fri Feb 23 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.6-50.vanilla]
-- import ark-infra from ark-infra-stable-6.7 (3f670a9e3ab) (Thorsten Leemhuis)
+* Fri Feb 23 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.7.6-0]
+- Add CVE fix for 6.7.6 (Justin M. Forbes)
 - Linux v6.7.6
 Resolves: 
 
