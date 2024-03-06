@@ -8,5 +8,5 @@ if [[ -e .git/shallow ]] && ! grep --silent '^SUBLEVEL = 0' Makefile; then
 	echo "$ git fetch --shallow-exclude=${branchpoint}"
 	echo "This might flatten your history; press CTRL+C to abort."
 	sleep 10
-	git fetch --shallow-exclude="${branchpoint}" || :
+	git fetch --verbose --shallow-exclude="${branchpoint}" || :
 fi
