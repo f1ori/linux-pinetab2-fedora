@@ -1,6 +1,5 @@
-* Wed Mar 06 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc7.20240306gt5847c977.56.vanilla]
-- import ark-infra from ark-infra-mainline-latest (a36a20e8c27) (Thorsten Leemhuis)
-- Linux v6.8.0-0.rc7.20240306gt5847c977
+* Wed Mar 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc7.57]
+- Consolidate 6.8 configs to common (Justin M. Forbes)
 Resolves: 
 
 * Tue Mar 05 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc7.56]
