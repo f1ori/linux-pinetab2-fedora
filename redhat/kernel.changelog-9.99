@@ -1,6 +1,14 @@
-* Thu Mar 07 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.0-0.rc7.20240307gt67be068d.57.vanilla]
-- import ark-infra from ark-infra-mainline-latest (21f6cb8d4e9) (Thorsten Leemhuis)
-- Linux v6.8.0-0.rc7.20240307gt67be068d
+* Thu Mar 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc7.67be068d31d4.59]
+- Linux v6.8.0-0.rc7.67be068d31d4
+Resolves: 
+
+* Thu Mar 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc7.58]
+- Fedora: enable Microchip and their useful drivers (Peter Robinson)
+- spec: suppress "set +x" output (Jan Stancek)
+- redhat/configs: Disable CONFIG_RDMA_SIW (Kamal Heib)
+- redhat/configs: Disable CONFIG_RDMA_RXE (Kamal Heib)
+- redhat/configs: Disable CONFIG_MLX4 (Kamal Heib)
+- redhat/configs: Disable CONFIG_INFINIBAND_HFI1 and CONFIG_INFINIBAND_RDMAVT (Kamal Heib)
 Resolves: 
 
 * Wed Mar 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.8.0-0.rc7.57]
