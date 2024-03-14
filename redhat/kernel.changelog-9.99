@@ -1,6 +1,10 @@
-* Wed Mar 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc0.20240313gtb0546776.2.vanilla]
-- import ark-infra from ark-infra-mainline-latest (6d561681b61) (Thorsten Leemhuis)
-- Linux v6.9.0-0.rc0.20240313gtb0546776
+* Wed Mar 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc0.b0546776ad3f.4]
+- arch/x86/kernel/setup.c: fixup rh_check_supported (Scott Weaver)
+Resolves: 
+
+* Wed Mar 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc0.b0546776ad3f.3]
+- Fix changelog after rebase (Augusto Caringi)
+- Linux v6.9.0-0.rc0.b0546776ad3f
 Resolves: 
 
 * Tue Mar 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc0.855684c7d938.2]
