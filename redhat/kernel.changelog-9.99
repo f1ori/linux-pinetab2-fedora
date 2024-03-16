@@ -1,0 +1,5 @@
+* Sat Mar 16 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.1-50.vanilla]
+- import ark-infra from ark-infra-stable-6.8 (00ec122ee1d) (Thorsten Leemhuis)
+- Linux v6.8.1
+Resolves: 
+
