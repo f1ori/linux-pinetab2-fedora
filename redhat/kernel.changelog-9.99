@@ -1,5 +1,6 @@
-* Wed Mar 06 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.9-50.vanilla]
-- import ark-infra from ark-infra-stable-6.7 (7144ba322ae) (Thorsten Leemhuis)
+* Wed Mar 06 2024 Augusto Caringi <acaringi@redhat.com> [6.7.9-0]
+- Add some CVE fixes for 6.7.9 (Justin M. Forbes)
+- Bluetooth: rfcomm: Fix null-ptr-deref in rfcomm_check_security (Yuxuan Hu)
 - Linux v6.7.9
 Resolves: 
 
