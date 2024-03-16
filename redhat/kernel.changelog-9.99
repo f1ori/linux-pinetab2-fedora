@@ -1,3 +1,8 @@
+* Sat Mar 16 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc0.20240316gt66a27aba.7.vanilla]
+- import ark-infra from ark-infra-mainline-latest (25c53fca485) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc0.20240316gt66a27aba
+Resolves: 
+
 * Fri Mar 15 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc0.e5eb28f6d1af.7]
 - arch/x86/kernel/setup.c: fixup rh_check_supported (Scott Weaver)
 - Add new of_test module to mod-internal.list (Thorsten Leemhuis)
