@@ -1,3 +1,8 @@
+* Wed Mar 20 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc0.20240320gta4145ce1.11.vanilla]
+- import ark-infra from ark-infra-mainline-latest (dfe13fae489) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc0.20240320gta4145ce1
+Resolves: 
+
 * Tue Mar 19 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc0.b3603fcb79b1.11]
 - Add new of_test module to mod-internal.list (Thorsten Leemhuis)
 - Add new string kunit modules to mod-internal.list (Thorsten Leemhuis)
