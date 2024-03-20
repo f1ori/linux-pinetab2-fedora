@@ -212,6 +212,7 @@ bool needs_dsc_aux_workaround(struct dc_link *link)
 	return false;
 }
 
+#if defined(CONFIG_DRM_AMD_DC_FP)
 static bool is_synaptics_cascaded_panamera(struct dc_link *link, struct drm_dp_mst_port *port)
 {
 	u8 branch_vendor_data[4] = { 0 }; // Vendor data 0x50C ~ 0x50F
@@ -271,6 +272,7 @@ static bool validate_dsc_caps_on_connector(struct amdgpu_dm_connector *aconnecto
 
 	return true;
 }
+#endif
 
 static bool retrieve_downstream_port_device(struct amdgpu_dm_connector *aconnector)
 {
@@ -404,9 +406,11 @@ static int dm_dp_mst_get_modes(struct drm_connector *connector)
 			amdgpu_dm_update_freesync_caps(
 					connector, aconnector->edid);
 
+#if defined(CONFIG_DRM_AMD_DC_FP)
 			if (!validate_dsc_caps_on_connector(aconnector))
 				memset(&aconnector->dc_sink->dsc_caps,
 				       0, sizeof(aconnector->dc_sink->dsc_caps));
+#endif
 
 			if (!retrieve_downstream_port_device(aconnector))
 				memset(&aconnector->mst_downstream_port_present,
@@ -798,6 +802,7 @@ struct dsc_mst_fairness_params {
 	struct amdgpu_dm_connector *aconnector;
 };
 
+#if defined(CONFIG_DRM_AMD_DC_FP)
 static int kbps_to_peak_pbn(int kbps)
 {
 	u64 peak_kbps = kbps;
@@ -1593,6 +1598,7 @@ static bool is_dsc_common_config_possible(struct dc_stream_state *stream,
 
 	return bw_range->max_target_bpp_x16 && bw_range->min_target_bpp_x16;
 }
+#endif
 
 #if defined(CONFIG_DRM_AMD_DC_FP)
 static bool dp_get_link_current_set_bw(struct drm_dp_aux *aux, uint32_t *cur_link_bw)
