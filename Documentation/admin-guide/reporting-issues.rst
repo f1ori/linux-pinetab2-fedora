@@ -4,232 +4,291 @@
 Reporting issues
 ++++++++++++++++
 
+The short guide on reporting Linux kernel issues (aka "the TL;DR")
+==================================================================
 
-The short guide (aka TL;DR)
-===========================
+Skim the output of ``journalctl -k`` for indicators of problems leading to your
+bug. For the same reasons check that you kernel does not regards itself as
+tainted. Consider some glitch in your kernel's environment causes it to
+misbehave (hardware, initramfs, distribution, file system, compiler, ...).
 
-Are you facing a regression with vanilla kernels from the same stable or
-longterm series? One still supported? Then search the `LKML
-<https://lore.kernel.org/lkml/>`_ and the `Linux stable mailing list
-<https://lore.kernel.org/stable/>`_ archives for matching reports to join. If
-you don't find any, install `the latest release from that series
-<https://kernel.org/>`_. If it still shows the issue, report it to the stable
-mailing list (stable@vger.kernel.org) and CC the regressions list
-(regressions@lists.linux.dev); ideally also CC the maintainer and the mailing
-list for the subsystem in question.
+If you deal with multiple issues, process each separately.
 
-In all other cases try your best guess which kernel part might be causing the
-issue. Check the :ref:`MAINTAINERS <maintainers>` file for how its developers
-expect to be told about problems, which most of the time will be by email with a
-mailing list in CC. Check the destination's archives for matching reports;
-search the `LKML <https://lore.kernel.org/lkml/>`_ and the web, too. If you
-don't find any to join, install `the latest mainline kernel
-<https://kernel.org/>`_. If the issue is present there, send a report.
+Search `lore <https://lore.kernel.org/all/>`_ for earlier reports and fixes.
+Then the wider internet. Consult :ref:`MAINTAINERS <maintainers>` to determine
+how bugs for the affected driver or subsystem must be submitted. This is usually
+by mail and rarely bugzilla.kernel.org; if the responsible developers use an
+externally archived mailing list or one of various bug trackers, search those as
+well.
 
-The issue was fixed there, but you would like to see it resolved in a still
-supported stable or longterm series as well? Then install its latest release.
-If it shows the problem, search for the change that fixed it in mainline and
-check if backporting is in the works or was discarded; if it's neither, ask
-those who handled the change for it.
+In case the issue is a regression still occurring in a less than two (ideally:
+one) weeks old kernel that is vanilla or close to it: send a brief email to
+regressions@lists.linux.dev while asking if the regression is known already; you
+right afterwards may continue following this guide, which you definitely should
+if you do not get a positive reply within three days.
 
-**General remarks**: When installing and testing a kernel as outlined above,
-ensure it's vanilla (IOW: not patched and not using add-on modules). Also make
-sure it's built and running in a healthy environment and not already tainted
-before the issue occurs.
+Verify the bug and in case of a regression potentially bisect it as described in
+Documentation/admin-guide/verify-bugs-and-bisect-regressions.rst; alternatively
+handle the tasks covered by that guide on your own:
 
-If you are facing multiple issues with the Linux kernel at once, report each
-separately. While writing your report, include all information relevant to the
-issue, like the kernel and the distro used. In case of a regression, CC the
-regressions mailing list (regressions@lists.linux.dev) to your report. Also try
-to pin-point the culprit with a bisection; if you succeed, include its
-commit-id and CC everyone in the sign-off-by chain.
+* Verify the bug occurs with a current kernel. For regressions within a still
+  supported stable or longterm series, current means the latest release from
+  that series. In all other cases, this means a mainline release, pre-release,
+  or snapshot ideally less than one week old and two at maximum; the latest
+  release from the newest stable series might work as well, especially if the
+  series is based on a mainline release less than two weeks old.
 
-Once the report is out, answer any questions that come up and help where you
-can. That includes keeping the ball rolling by occasionally retesting with newer
-releases and sending a status update afterwards.
+* In case of a regression, consider bisecting it. If it is one within a
+  stable/longterm series, verify if a current mainline kernel is affected as
+  well.
 
-Step-by-step guide how to report issues to the kernel maintainers
-=================================================================
+* All kernels used for verifying and reporting bugs must be free of externally
+  developed modules (e.g. Nvidia's graphics drivers, OpenZFS, or VirtualBox's
+  host drivers). The kernels also should be built from pristine (aka 'vanilla')
+  Linux sources, but lightly patched might work, too. The kernels furthermore
+  should not be 'tainted' when the issue occurs; if that's impossible to avoid,
+  explain it in your report.
 
-The above TL;DR outlines roughly how to report issues to the Linux kernel
-developers. It might be all that's needed for people already familiar with
-reporting issues to Free/Libre & Open Source Software (FLOSS) projects. For
-everyone else there is this section. It is more detailed and uses a
-step-by-step approach. It still tries to be brief for readability and leaves
-out a lot of details; those are described below the step-by-step guide in a
-reference section, which explains each of the steps in more detail.
+Were you unable to reproduce a bug with a mainline kernel you want to see fixed
+in a stable or longterm series? A bug that is not a regression? Then move over
+to 'Resolving non-regressions only occurring in stable or longterm kernels'.
 
-Note: this section covers a few more aspects than the TL;DR and does things in
-a slightly different order. That's in your interest, to make sure you notice
-early if an issue that looks like a Linux kernel problem is actually caused by
-something else. These steps thus help to ensure the time you invest in this
-process won't feel wasted in the end:
+Compile a report with all important details. This always includes the
+distribution and kernel version used. Most of the time you also want to describe
+relevant aspects of your system and make the kernel's log messages available; do
+the same for everything else most likely relevant. In case of a regression, make
+that aspect obvious in the title; also mention it near the top while specifying
+the last working and first broken version.
 
- * Are you facing an issue with a Linux kernel a hardware or software vendor
-   provided? Then in almost all cases you are better off to stop reading this
-   document and reporting the issue to your vendor instead, unless you are
-   willing to install the latest Linux version yourself. Be aware the latter
-   will often be needed anyway to hunt down and fix issues.
+Submit your report in the appropriate way, which depends on the outcome of the
+verification:
 
- * Perform a rough search for existing reports with your favorite internet
-   search engine; additionally, check the archives of the `Linux Kernel Mailing
-   List (LKML) <https://lore.kernel.org/lkml/>`_. If you find matching reports,
-   join the discussion instead of sending a new one.
+* Are you facing a regression within a stable or longterm kernel series you were
+  unable to reproduce in a mainline kernel? Then report it by email to the
+  stable team while CCing the regressions lists (To: Greg Kroah-Hartman
+  <gregkh@linuxfoundation.org>, Sasha Levin <sashal@kernel.org>;
+  CC: stable@vger.kernel.org, regressions@lists.linux.dev,
+  linux-kernel@vger.kernel.org).
 
- * See if the issue you are dealing with qualifies as regression, security
-   issue, or a really severe problem: those are 'issues of high priority' that
-   need special handling in some steps that are about to follow.
+* In all other cases, submit the report as specified in MAINTAINERS. In case of
+  a regression you have to report by mail, CC the regressions list
+  (regressions@lists.linux.dev); when you know the culprit, also CC everyone in
+  its 'Signed-off-by' chain. In case of a regression you have to file in a bug
+  tracker, write a short heads-up email with a link to the report to the list
+  once you have done so -- if the culprit is known, CC everyone that signed the
+  culprit off, too.
 
- * Make sure it's not the kernel's surroundings that are causing the issue
-   you face.
+Answer any questions that come up in a timely manner and help where you can to
+resolve the issue. If things stall for more than three weeks, send a friendly
+inquiry. Retest with at least every first release candidate (-rc1) of a new
+mainline version and report your findings.
 
- * Create a fresh backup and put system repair and restore tools at hand.
-
- * Ensure your system does not enhance its kernels by building additional
-   kernel modules on-the-fly, which solutions like DKMS might be doing locally
-   without your knowledge.
-
- * Check if your kernel was 'tainted' when the issue occurred, as the event
-   that made the kernel set this flag might be causing the issue you face.
-
- * Write down coarsely how to reproduce the issue. If you deal with multiple
-   issues at once, create separate notes for each of them and make sure they
-   work independently on a freshly booted system. That's needed, as each issue
-   needs to get reported to the kernel developers separately, unless they are
-   strongly entangled.
-
- * If you are facing a regression within a stable or longterm version line
-   (say something broke when updating from 5.10.4 to 5.10.5), scroll down to
-   'Dealing with regressions within a stable and longterm kernel line'.
-
- * Locate the driver or kernel subsystem that seems to be causing the issue.
-   Find out how and where its developers expect reports. Note: most of the
-   time this won't be bugzilla.kernel.org, as issues typically need to be sent
-   by mail to a maintainer and a public mailing list.
-
- * Search the archives of the bug tracker or mailing list in question
-   thoroughly for reports that might match your issue. If you find anything,
-   join the discussion instead of sending a new report.
-
-After these preparations you'll now enter the main part:
-
- * Unless you are already running the latest 'mainline' Linux kernel, better
-   go and install it for the reporting process. Testing and reporting with
-   the latest 'stable' Linux can be an acceptable alternative in some
-   situations; during the merge window that actually might be even the best
-   approach, but in that development phase it can be an even better idea to
-   suspend your efforts for a few days anyway. Whatever version you choose,
-   ideally use a 'vanilla' build. Ignoring these advices will dramatically
-   increase the risk your report will be rejected or ignored.
-
- * Ensure the kernel you just installed does not 'taint' itself when
-   running.
-
- * Reproduce the issue with the kernel you just installed. If it doesn't show
-   up there, scroll down to the instructions for issues only happening with
-   stable and longterm kernels.
-
- * Optimize your notes: try to find and write the most straightforward way to
-   reproduce your issue. Make sure the end result has all the important
-   details, and at the same time is easy to read and understand for others
-   that hear about it for the first time. And if you learned something in this
-   process, consider searching again for existing reports about the issue.
-
- * If your failure involves a 'panic', 'Oops', 'warning', or 'BUG', consider
-   decoding the kernel log to find the line of code that triggered the error.
-
- * If your problem is a regression, try to narrow down when the issue was
-   introduced as much as possible.
-
- * Start to compile the report by writing a detailed description about the
-   issue. Always mention a few things: the latest kernel version you installed
-   for reproducing, the Linux Distribution used, and your notes on how to
-   reproduce the issue. Ideally, make the kernel's build configuration
-   (.config) and the output from ``dmesg`` available somewhere on the net and
-   link to it. Include or upload all other information that might be relevant,
-   like the output/screenshot of an Oops or the output from ``lspci``. Once
-   you wrote this main part, insert a normal length paragraph on top of it
-   outlining the issue and the impact quickly. On top of this add one sentence
-   that briefly describes the problem and gets people to read on. Now give the
-   thing a descriptive title or subject that yet again is shorter. Then you're
-   ready to send or file the report like the MAINTAINERS file told you, unless
-   you are dealing with one of those 'issues of high priority': they need
-   special care which is explained in 'Special handling for high priority
-   issues' below.
-
- * Wait for reactions and keep the thing rolling until you can accept the
-   outcome in one way or the other. Thus react publicly and in a timely manner
-   to any inquiries. Test proposed fixes. Do proactive testing: retest with at
-   least every first release candidate (RC) of a new mainline version and
-   report your results. Send friendly reminders if things stall. And try to
-   help yourself, if you don't get any help or if it's unsatisfying.
+General remarks: take the 'test with a current upstream codebase' aspect
+seriously, as that due to peculiarities of the Linux kernel development model is
+a lot more important than in other Free/Libre Open Source projects; furthermore
+be aware that bugzilla.kernel.org in almost all cases is the wrong place to
+submit a bug report.
 
 
-Reporting regressions within a stable and longterm kernel line
---------------------------------------------------------------
+The detailed step-by-step guide on reporting Linux kernel issues
+================================================================
 
-This subsection is for you, if you followed above process and got sent here at
-the point about regression within a stable or longterm kernel version line. You
-face one of those if something breaks when updating from 5.10.4 to 5.10.5 (a
-switch from 5.9.15 to 5.10.5 does not qualify). The developers want to fix such
-regressions as quickly as possible, hence there is a streamlined process to
-report them:
+The short guide above might be all that is needed for people already familiar
+with reporting issues to Free/Libre & Open Source Software (FLOSS) projects. For
+everyone else there is this more detailed step-by-step guide. It still tries to
+be brief and leaves a lot of details occasionally relevant to a reference
+section, which holds additional information for almost all of the steps.
 
- * Check if the kernel developers still maintain the Linux kernel version
-   line you care about: go to the  `front page of kernel.org
-   <https://kernel.org/>`_ and make sure it mentions
-   the latest release of the particular version line without an '[EOL]' tag.
+Note: this step-by-step guide covers more aspects than the short guide above and
+does things in a slightly different order; that is done in your interest, to
+make sure you notice early on when you are on the wrong track.
 
- * Check the archives of the `Linux stable mailing list
-   <https://lore.kernel.org/stable/>`_ for existing reports.
+* Be aware you must have or install a fresh vanilla mainline kernel for
+  reporting; you furthermore must remove any software that builds or relies on
+  externally developed kernel modules possibly installed. There is also a decent
+  chance you will have to build a patched kernel yourself to help resolve the
+  issue.
 
- * Install the latest release from the particular version line as a vanilla
-   kernel. Ensure this kernel is not tainted and still shows the problem, as
-   the issue might have already been fixed there. If you first noticed the
-   problem with a vendor kernel, check a vanilla build of the last version
-   known to work performs fine as well.
+  In case that sounds do demanding to you, better report the issue to the vendor
+  who built your kernel -- e.g. your hardware manufacturer or Linux distributor.
 
- * Send a short problem report to the Linux stable mailing list
-   (stable@vger.kernel.org) and CC the Linux regressions mailing list
-   (regressions@lists.linux.dev); if you suspect the cause in a particular
-   subsystem, CC its maintainer and its mailing list. Roughly describe the
-   issue and ideally explain how to reproduce it. Mention the first version
-   that shows the problem and the last version that's working fine. Then
-   wait for further instructions.
+* Skim the output of ``journalctl -k`` for any indicators of problems that might
+  lead to your bug that otherwise would never happen.
 
-The reference section below explains each of these steps in more detail.
+* Check if the kernel was already 'tainted' when the issue first occurred: the
+  event that led to this flag being set might cause your issue, even if it looks
+  totally unrelated.
+
+* Consider some glitch in your kernel's environment makes it misbehave -- like a
+  hardware defect, an overclocked component, a broken initramfs, an inconsistent
+  file system, a pre-release compiler, or a malfunctioning/misconfigured Linux
+  distribution.
+
+* If you deal with multiple issues at once, process them separately from now on.
+  If there is even a small chance they are related, briefly mention the other
+  issues later in each of the reports, ideally while linking to the others.
+
+* Search for fixes and earlier reports referring to an issue like yours. Start
+  by checking `lore <https://lore.kernel.org/all/>`_. Then perform a general
+  internet search. Consult :ref:`MAINTAINERS <maintainers>` to determine where
+  developers of the affected code expect bugs to be submitted to; if in a doubt,
+  use your best guess to determine the driver or kernel subsystem. If its
+  developers have a dedicated mailing list not archived on lore, search its
+  archives; when the driver or subsystem is among the few that uses one of the
+  various bug trackers utilized, search it as well. Note, bugzilla.kernel.org
+  only for a small percentage of the kernel is the right place to file bugs; if
+  you submit bugs for other code there it most likely will be ignored.
+
+  If you find fixes, try them. If you find matching reports, evaluate whatever
+  is wiser: joining the discussion or reporting the problem anew. In the latter
+  case mention and link to the related report you found; after you submit it,
+  add a note to the related report along the lines of 'I have a problem that
+  might be the same or related, for details see <link_to_your_report>'.
+
+* Are you facing a regression? One still occurring with a less than two
+  (ideally: one) weeks old kernel from the affected series? A kernel that is
+  vanilla or close to it? Then send an email to <regressions@lists.linux.dev>
+  which outlines the problem in one or two short paragraphs while asking if it
+  is known already. Consider proceeding with this guide immediately to confine
+  the problem and report it properly; definitely do so, if you don't receive any
+  helpful answer within two days.
+
+* Evaluate if the issue you are dealing with qualifies as regression, security
+  issue, or a really severe problem: those need special handling in some of the
+  following steps.
+
+* Write down coarsely how to reproduce the issue on a freshly booted system.
+
+* Verify the bug and potentially bisect any regression as described in
+  Documentation/admin-guide/verify-bugs-and-bisect-regressions.rst;
+  alternatively perform these tasks through different measures as outlined in
+  the reference section.
+
+  Note, don't skip this step or take its demands lightheartedly, as your report
+  otherwise risks being ignored or welcomed coldly.
+
+* Were you unable to reproduce a bug with a mainline kernel you want to see
+  fixed in a stable or longterm series? A bug that is not a regression? Then
+  move over to ‘Resolving non-regressions only occurring in stable or longterm
+  kernels’.
+
+* If you learned anything new about the bug while following this guide so far,
+  consider searching once more for earlier reports and fixes.
+
+* Were you unable to reproduce a bug on a fresh mainline kernel you want to see
+  fixed in stable or longterm kernels? A bug that's not a regression? Then abort
+  here and head over to 'Resolving issues only occurring in stable or longterm
+  kernels' below.
+
+* Optional: if your failure involves a 'panic', 'Oops', 'warning', or 'BUG',
+  ideally decode the included stack trace.
+
+* Prepare the report by writing a detailed description of the issue.
+
+  Always mention the Linux distribution and the kernel version used for the
+  verification; also include your notes on how to reproduce the issue. If your
+  failure involves a 'panic', 'Oops', 'warning', or 'BUG', include a copy or
+  photo of it.
+
+  Most of the time you also want to describe relevant aspects of your
+  environment, like the machine's model name, the involved hardware components,
+  and the version of your Mesa drivers. Often you want to also save the output
+  of ``journalctl -k`` to a file you later attach to your report or upload
+  somewhere and link to.
+
+  Also attach or upload & link all other information about the environment that
+  might be relevant, or the output from commands as ``lsblk``, ``lspci``,
+  ``lsusb.py`` and ``grep -s '' /sys/class/dmi/id/*``.
+
+  If anything in the attached or linked files is most likely relevant, ensure to
+  copy that part to the body of the report to make it easily accessible.
+  Furthermore do not overload the report with many or huge attachments:
+  developers will ask for additional data when needed.
+
+  Ensure both the subject and the first sentence of the report outlines the core
+  of the problem and gets people interested enough to read on.
+
+  When finished, review and optimize the report once more to make it as
+  straightforward as possible and the core of the problem easy to grasp.
+
+* Submit your report in the appropriate way, which depends on the outcome of the
+  verification:
+
+  * In case you deal with a security issue, follow the instructions in
+    Documentation/process/security-bugs.rst.
+
+  * Are you facing a regression within a stable or longterm kernel series you
+    were unable to reproduce with a fresh mainline kernel? Then report it by
+    email to the stable team while CCing the regressions lists (To:
+    Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+    Sasha Levin <sashal@kernel.org>; CC: stable@vger.kernel.org,
+    regressions@lists.linux.dev, linux-kernel@vger.kernel.org).
+
+  * In all other cases, submit the report as specified in MAINTAINERS. In case
+    of a regression you have to report by mail, CC the regressions list
+    (regressions@lists.linux.dev); when you know the culprit, also CC everyone
+    in its 'Signed-off-by' chain. In case of a regression you had to file in a
+    bug tracker, write a short heads-up email with a link to the report to the
+    list and everyone that signed the patch off, if the culprit is known.
+
+    Did you send the brief inquiry about a regression mentioned earlier? Then in
+    both of these cases update the thread: either send your report as a reply to
+    the earlier inquiry or send a quick note with a link to the proper report.
+
+* Wait for reactions and keep the ball rolling until you can accept the outcome
+  in one way or the other. That among others means:
+
+  * React publicly and in a timely manner to any inquiries.
+
+  * Try to quickly test proposed fixes.
+
+  * Perform proactive testing: retest with at least every first release
+    candidate (e.g. -rc1) of a new mainline version and report your findings in
+    a reply to your report.
+
+  * If things stall for more than three or four weeks, check if that happened
+    due to an inadequate report of yours; if not, send a friendly inquiry.
+
+  * Be aware that nobody is obliged to help you, unless it is a recent
+    regression, a security issue, or a really severe problem; hence try to help
+    yourself, if you don't receive any or only unsatisfying help.
 
 
-Reporting issues only occurring in older kernel version lines
--------------------------------------------------------------
+Resolving non-regressions only occurring in stable or longterm kernels
+----------------------------------------------------------------------
 
-This subsection is for you, if you tried the latest mainline kernel as outlined
-above, but failed to reproduce your issue there; at the same time you want to
-see the issue fixed in a still supported stable or longterm series or vendor
-kernels regularly rebased on those. If that the case, follow these steps:
+Are you facing an issue in a still supported stable or longterm series you were
+unable to reproduce with a fresh mainline kernel? An issue that is also not a
+regression and still happens in the series latest release? In that case follow
+these steps:
 
- * Prepare yourself for the possibility that going through the next few steps
-   might not get the issue solved in older releases: the fix might be too big
-   or risky to get backported there.
+* Prepare yourself for the possibility that trying to resolve the issue resolved
+  in the affected stable or longterm series might not work out: the fix might be
+  too big or risky to include there.
 
- * Perform the first three steps in the section "Dealing with regressions
-   within a stable and longterm kernel line" above.
+* Search Linux' mainline Git repository or lore for the change that resolved the
+  issue; when unsuccessful, consider using a bisection to find it. Then check
+  the description of the fix for a 'stable tag', e.g, a line like
+  'Cc: <stable@vger.kernel.org>':
 
- * Search the Linux kernel version control system for the change that fixed
-   the issue in mainline, as its commit message might tell you if the fix is
-   scheduled for backporting already. If you don't find anything that way,
-   search the appropriate mailing lists for posts that discuss such an issue
-   or peer-review possible fixes; then check the discussions if the fix was
-   deemed unsuitable for backporting. If backporting was not considered at
-   all, join the newest discussion, asking if it's in the cards.
+ * In case there is such a tag the change is already scheduled for backporting.
+   Usually it will be picked up within two or three weeks after being merged to
+   mainline. Note, a version number after the tag might limit backporting to a
+   series that is newer than the one you care for; plans to backport a change
+   sometimes are also discarded. In such cases search lore or contact the
+   involved developers for details, but you likely are out of luck.
 
- * One of the former steps should lead to a solution. If that doesn't work
-   out, ask the maintainers for the subsystem that seems to be causing the
-   issue for advice; CC the mailing list for the particular subsystem as well
-   as the stable mailing list.
+ * If there was no stable tag, search the mailing list archives if backporting
+   nevertheless is in the works. If not, search for the review of the fix and
+   check if backporting to stable and longterm kernels is planned or was
+   rejected. If it's neither, send a reply asking the developers if backporting
+   to the series is an option. Note, they might greenlight it, but unwilling to
+   handle the job themselves -- in that case consider testing and submitting the
+   fix and everything it depends on as explained in
+   Documentation/process/stable-kernel-rules.rst.
 
-The reference section below explains each of these steps in more detail.
-
+ In case you have trouble locating the fix or the discussion about it, consider
+ asking the maintainers and developers of the affected subsystem for advice.
 
 Reference section: Reporting issues to the kernel maintainers
 =============================================================
@@ -1459,108 +1518,6 @@ option should get fixed. Maybe together you can also narrow down the root cause
 or the change that introduced a regression, which often makes developing a fix
 easier. And with a bit of luck there might be someone in the team that knows a
 bit about programming and might be able to write a fix.
-
-
-Reference for "Reporting regressions within a stable and longterm kernel line"
-------------------------------------------------------------------------------
-
-This subsection provides details for the steps you need to perform if you face
-a regression within a stable and longterm kernel line.
-
-Make sure the particular version line still gets support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    *Check if the kernel developers still maintain the Linux kernel version
-    line you care about: go to the front page of kernel.org and make sure it
-    mentions the latest release of the particular version line without an
-    '[EOL]' tag.*
-
-Most kernel version lines only get supported for about three months, as
-maintaining them longer is quite a lot of work. Hence, only one per year is
-chosen and gets supported for at least two years (often six). That's why you
-need to check if the kernel developers still support the version line you care
-for.
-
-Note, if kernel.org lists two stable version lines on the front page, you
-should consider switching to the newer one and forget about the older one:
-support for it is likely to be abandoned soon. Then it will get a "end-of-life"
-(EOL) stamp. Version lines that reached that point still get mentioned on the
-kernel.org front page for a week or two, but are unsuitable for testing and
-reporting.
-
-Search stable mailing list
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    *Check the archives of the Linux stable mailing list for existing reports.*
-
-Maybe the issue you face is already known and was fixed or is about to. Hence,
-`search the archives of the Linux stable mailing list
-<https://lore.kernel.org/stable/>`_ for reports about an issue like yours. If
-you find any matches, consider joining the discussion, unless the fix is
-already finished and scheduled to get applied soon.
-
-Reproduce issue with the newest release
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    *Install the latest release from the particular version line as a vanilla
-    kernel. Ensure this kernel is not tainted and still shows the problem, as
-    the issue might have already been fixed there. If you first noticed the
-    problem with a vendor kernel, check a vanilla build of the last version
-    known to work performs fine as well.*
-
-Before investing any more time in this process you want to check if the issue
-was already fixed in the latest release of version line you're interested in.
-This kernel needs to be vanilla and shouldn't be tainted before the issue
-happens, as detailed outlined already above in the section "Install a fresh
-kernel for testing".
-
-Did you first notice the regression with a vendor kernel? Then changes the
-vendor applied might be interfering. You need to rule that out by performing
-a recheck. Say something broke when you updated from 5.10.4-vendor.42 to
-5.10.5-vendor.43. Then after testing the latest 5.10 release as outlined in
-the previous paragraph check if a vanilla build of Linux 5.10.4 works fine as
-well. If things are broken there, the issue does not qualify as upstream
-regression and you need switch back to the main step-by-step guide to report
-the issue.
-
-Report the regression
-~~~~~~~~~~~~~~~~~~~~~
-
-    *Send a short problem report to the Linux stable mailing list
-    (stable@vger.kernel.org) and CC the Linux regressions mailing list
-    (regressions@lists.linux.dev); if you suspect the cause in a particular
-    subsystem, CC its maintainer and its mailing list. Roughly describe the
-    issue and ideally explain how to reproduce it. Mention the first version
-    that shows the problem and the last version that's working fine. Then
-    wait for further instructions.*
-
-When reporting a regression that happens within a stable or longterm kernel
-line (say when updating from 5.10.4 to 5.10.5) a brief report is enough for
-the start to get the issue reported quickly. Hence a rough description to the
-stable and regressions mailing list is all it takes; but in case you suspect
-the cause in a particular subsystem, CC its maintainers and its mailing list
-as well, because that will speed things up.
-
-And note, it helps developers a great deal if you can specify the exact version
-that introduced the problem. Hence if possible within a reasonable time frame,
-try to find that version using vanilla kernels. Lets assume something broke when
-your distributor released a update from Linux kernel 5.10.5 to 5.10.8. Then as
-instructed above go and check the latest kernel from that version line, say
-5.10.9. If it shows the problem, try a vanilla 5.10.5 to ensure that no patches
-the distributor applied interfere. If the issue doesn't manifest itself there,
-try 5.10.7 and then (depending on the outcome) 5.10.8 or 5.10.6 to find the
-first version where things broke. Mention it in the report and state that 5.10.9
-is still broken.
-
-What the previous paragraph outlines is basically a rough manual 'bisection'.
-Once your report is out your might get asked to do a proper one, as it allows to
-pinpoint the exact change that causes the issue (which then can easily get
-reverted to fix the issue quickly). Hence consider to do a proper bisection
-right away if time permits. See the section 'Special care for regressions' and
-the document Documentation/admin-guide/bug-bisect.rst for details how to
-perform one. In case of a successful bisection add the author of the culprit to
-the recipients; also CC everyone in the signed-off-by chain, which you find at
-the end of its commit message.
 
 
 Reference for "Reporting issues only occurring in older kernel version lines"
