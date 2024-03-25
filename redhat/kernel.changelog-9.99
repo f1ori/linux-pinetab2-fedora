@@ -1,3 +1,8 @@
+* Mon Mar 25 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.2-0.rc2.50.vanilla]
+- import ark-infra from ark-infra-stable-6.8 (682546d48ed) (Thorsten Leemhuis)
+- Linux v6.8.2-0.rc2
+Resolves: 
+
 * Wed Mar 20 2024 Augusto Caringi <acaringi@redhat.com> [6.8.1-0]
 - redhat/configs: Enable CONFIG_MITIGATION_RFDS (Augusto Caringi)
 - fedora: Enable MCP9600 (Peter Robinson)
