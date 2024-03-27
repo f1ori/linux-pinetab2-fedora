@@ -410,8 +410,6 @@ Summary: The Linux kernel
 %define with_bpftool 0
 %define with_kernel_abi_stablelists 0
 %define with_selftests 0
-%define with_cross 0
-%define with_cross_headers 0
 %define with_ipaclones 0
 %endif
 
@@ -441,8 +439,6 @@ Summary: The Linux kernel
 %define with_bpftool 0
 %define with_kernel_abi_stablelists 0
 %define with_selftests 0
-%define with_cross 0
-%define with_cross_headers 0
 %define with_ipaclones 0
 %define with_headers 0
 %define with_efiuki 0
@@ -1152,6 +1148,7 @@ This package contains the kernel source perf library.
 
 %package -n libperf-devel
 Summary: Developement files for the perf library from kernel source
+Requires: libperf = %{version}-%{release}
 %description -n libperf-devel
 This package includes libraries and header files needed for development
 of applications which use perf library from kernel source.
@@ -1168,7 +1165,7 @@ This package provides debug information for the libperf package.
 # symlinks because of the trailing nonmatching alternation and
 # the leading .*, because of find-debuginfo.sh's buggy handling
 # of matching the pattern against the symlinks file.
-%{expand:%%global _find_debuginfo_opts %{?_find_debuginfo_opts} -p '.*%%{_libdir}/libperf.so(\.debug)?|XXX' -o libperf-debuginfo.list}
+%{expand:%%global _find_debuginfo_opts %{?_find_debuginfo_opts} -p '.*%%{_libdir}/libperf.so.*(\.debug)?|XXX' -o libperf-debuginfo.list}
 # with_libperf
 %endif
 
@@ -1572,7 +1569,7 @@ Provides: installonlypkg(kernel)\
 Provides: kernel-%{?1:%{1}-}uname-r = %{KVERREL}%{uname_suffix %{?1:+%{1}}}\
 Requires: kernel%{?1:-%{1}}-modules-core-uname-r = %{KVERREL}%{uname_suffix %{?1:+%{1}}}\
 Requires(pre): %{kernel_prereq}\
-Requires(pre): systemd >= 254-1\
+Requires(pre): systemd\
 %endif\
 %endif\
 %if %{with_gcov}\
@@ -2520,7 +2517,7 @@ BuildKernel() {
     fi
 
     # build and copy the vmlinux-gdb plugin files into kernel-debuginfo
-    %{make} %{?_smp_mflags} scripts_gdb
+    %{make} ARCH=$Arch %{?_smp_mflags} scripts_gdb
     cp -a --parents scripts/gdb/{,linux/}*.py $RPM_BUILD_ROOT%{debuginfodir}/lib/modules/$KernelVer
     # this should be a relative symlink (Kbuild creates an absolute one)
     ln -s scripts/gdb/vmlinux-gdb.py $RPM_BUILD_ROOT%{debuginfodir}/lib/modules/$KernelVer/vmlinux-gdb.py
@@ -3864,7 +3861,7 @@ fi\
 %ghost /%{image_install_path}/dtb-%{KVERREL}%{?3:+%{3}} \
 %endif\
 /lib/modules/%{KVERREL}%{?3:+%{3}}/System.map\
-%ghost %attr(0600, root, root) /boot/System.map-%{KVERREL}%{?3:+%{3}}\
+%ghost /boot/System.map-%{KVERREL}%{?3:+%{3}}\
 %dir /lib/modules\
 %dir /lib/modules/%{KVERREL}%{?3:+%{3}}\
 /lib/modules/%{KVERREL}%{?3:+%{3}}/symvers.%compext\
