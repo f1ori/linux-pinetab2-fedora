@@ -1,3 +1,8 @@
+* Wed Mar 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc1.20240327gt7033999e.17.vanilla]
+- import ark-infra from ark-infra-mainline-latest (d104b989d47) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc1.20240327gt7033999e
+Resolves: 
+
 * Tue Mar 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc1.928a87efa423.17]
 - all: clean-up i915 (Peter Robinson)
 - Turn on CONFIG_READ_ONLY_THP_FOR_FS for Fedora (Justin M. Forbes)
