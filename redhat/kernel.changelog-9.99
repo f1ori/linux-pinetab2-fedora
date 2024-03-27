@@ -1,5 +1,5 @@
-* Sat Mar 16 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.10-50.vanilla]
-- import ark-infra from ark-infra-stable-6.7 (ec9834978cd) (Thorsten Leemhuis)
+* Mon Mar 18 2024 Augusto Caringi <acaringi@redhat.com> [6.7.10-0]
+- redhat/configs: Enable CONFIG_MITIGATION_RFDS (Augusto Caringi)
 - Linux v6.7.10
 Resolves: 
 
