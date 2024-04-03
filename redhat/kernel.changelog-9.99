@@ -1,3 +1,8 @@
+* Wed Apr 03 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.7.12-50.vanilla]
+- import ark-infra from ark-infra-stable-6.7 (a46c18330a9) (Thorsten Leemhuis)
+- Linux v6.7.12
+Resolves: 
+
 * Wed Mar 27 2024 Augusto Caringi <acaringi@redhat.com> [6.7.11-0]
 - Config updates for stable (Justin M. Forbes)
 - xfs: fix SEEK_HOLE/DATA for regions with active COW extents (Dave Chinner)
