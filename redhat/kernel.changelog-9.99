@@ -1,7 +1,3 @@
-* Wed Mar 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.2-50.vanilla]
-- import ark-infra from ark-infra-stable-6.8 (1f2ef452a71) (Thorsten Leemhuis)
-Resolves: 
-
 * Tue Mar 26 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.8.2-0]
 - xfs: fix SEEK_HOLE/DATA for regions with active COW extents (Dave Chinner)
 - redhat: make libperf-devel require libperf %%{version}-%%{release} (Jan Stancek)
