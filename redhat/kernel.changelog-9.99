@@ -1,3 +1,8 @@
+* Sun Apr 07 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc2.20240407gtf2f80ac8.28.vanilla]
+- import ark-infra from ark-infra-mainline-latest (9d4465b6873) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc2.20240407gtf2f80ac8
+Resolves: 
+
 * Sat Apr 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc2.6c6e47d69d82.28]
 - redhat/configs: remove CONFIG_INTEL_MENLOW as it is obsolete. (David Arcari)
 - Linux v6.9.0-0.rc2.6c6e47d69d82
