@@ -4,10 +4,6 @@
 Reporting issues
 ++++++++++++++++
 
-
-Reporting issues
-++++++++++++++++
-
 The short guide on reporting Linux kernel issues (aka "the TL;DR")
 ==================================================================
 
@@ -134,270 +130,71 @@ Are you facing an issue in a still supported stable or longterm series you were 
  In case you have trouble locating the fix or the discussion about it, try asking the maintainers and developers of the affected subsystem or the stable team for advice.
 
 
+Reference section: Reporting issues to the kernel maintainers =============================================================
 
-Reference section: Reporting issues to the kernel maintainers
-=============================================================
-
-The detailed guides above outline all the major steps in brief fashion, which
-should be enough for most people. But sometimes there are situations where even
-experienced users might wonder how to actually do one of those steps. That's
-what this section is for, as it will provide a lot more details on each of the
-above steps. Consider this as reference documentation: it's possible to read it
-from top to bottom. But it's mainly meant to skim over and a place to look up
-details how to actually perform those steps.
+The detailed step-by-step guide above outlines all the major steps in brief fashion, which should often cover everything required. But sometimes there are situations where even experienced users might wonder how to actually realize one of those steps. That's what the entries in this section are for, which provide additional information for each of the above steps.
 
 A few words of general advice before digging into the details:
 
-* The Linux kernel developers are well aware this process is complicated and
-  demands more than other FLOSS projects. We'd love to make it simpler. But
-  that would require work in various places as well as some infrastructure,
-  which would need constant maintenance; nobody has stepped up to do that
-  work, so that's just how things are for now.
+ * The developers are well aware that reporting a Linux kernel bug is complicated and more demanding than other FLOSS projects. Quite a few would love to make it simpler. But that would require convincing developers to change their habits as well as work in several other places and some infrastructure which would need constant maintenance; nobody has stepped up to work towards that, so that's just how things are for now.
 
-* A warranty or support contract with some vendor doesn't entitle you to
-  request fixes from developers in the upstream Linux kernel community: such
-  contracts are completely outside the scope of the Linux kernel, its
-  development community, and this document. That's why you can't demand
-  anything such a contract guarantees in this context, not even if the
-  developer handling the issue works for the vendor in question. If you want
-  to claim your rights, use the vendor's support channel instead. When doing
-  so, you might want to mention you'd like to see the issue fixed in the
-  upstream Linux kernel; motivate them by saying it's the only way to ensure
-  the fix in the end will get incorporated in all Linux distributions.
+ * A warranty or support contract with some vendor doesn't entitle you to request fixes from developers in the upstream Linux kernel community: such contracts are completely outside the scope of the upstream Linux kernel, its development community, and this document. That's why you can't demand anything such a contract guarantees from upstream, not even if the developers handling the issue work for the vendor in question. If you want to claim your rights, use the vendor's support channel instead. When doing so, you might want to mention you'd like to see the issue fixed in the upstream Linux kernel; motivate them by saying it's the only way to ensure the fix in the end will get incorporated in all Linux distributions.
 
-* If you never reported an issue to a FLOSS project before you should consider
-  reading `How to Report Bugs Effectively
-  <https://www.chiark.greenend.org.uk/~sgtatham/bugs.html>`_, `How To Ask
-  Questions The Smart Way
-  <http://www.catb.org/esr/faqs/smart-questions.html>`_, and `How to ask good
-  questions <https://jvns.ca/blog/good-questions/>`_.
+ * If you never reported an issue to a FLOSS project before, consider reading guides like `How to Report Bugs Effectively <https://www.chiark.greenend.org.uk/~sgtatham/bugs.html>`_, `How To Ask Questions The Smart Way <http://www.catb.org/esr/faqs/smart-questions.html>`_, and `How to ask good questions <https://jvns.ca/blog/good-questions/>`_.
 
-With that off the table, find below the details on how to properly report
-issues to the Linux kernel developers.
+With that off the table, find below the details on how to properly report issues to the Linux kernel developers.
 
+The need for a current vanilla mainline kernel
+----------------------------------------------
 
-Make sure you're using the upstream Linux kernel
-------------------------------------------------
+ *Be aware you must have or install a fresh vanilla mainline kernel for reporting; you furthermore must remove any software that builds or relies on externally developed kernel modules [...]*
 
-  *Are you facing an issue with a Linux kernel a hardware or software vendor
-  provided? Then in almost all cases you are better off to stop reading this
-  document and reporting the issue to your vendor instead, unless you are
-  willing to install the latest Linux version yourself. Be aware the latter
-  will often be needed anyway to hunt down and fix issues.*
+The kernels most users utilize are totally unsuitable for reporting bugs to the upstream Linux developers: like most programmers, these developers loathe spending time on reports about issues not occuring in the current supported code. Unfortunately such situations happen easily and frequently when it comes to Linux:
 
-Like most programmers, Linux kernel developers don't like to spend time dealing
-with reports for issues that don't even happen with their current code. It's
-just a waste everybody's time, especially yours. Unfortunately such situations
-easily happen when it comes to the kernel and often leads to frustration on both
-sides. That's because almost all Linux-based kernels pre-installed on devices
-(Computers, Laptops, Smartphones, Routers, …) and most shipped by Linux
-distributors are quite distant from the official Linux kernel as distributed by
-kernel.org: these kernels from these vendors are often ancient from the point of
-Linux development or heavily modified, often both.
+* Almost all Linux-based kernels pre-installed on devices (Computers, Laptops, Smartphones, Routers, …) and most shipped by Linux distributions are unsuitable or far from ideal for reporting issues upstream, as they are quite distant.
 
-Most of these vendor kernels are quite unsuitable for reporting issues to the
-Linux kernel developers: an issue you face with one of them might have been
-fixed by the Linux kernel developers months or years ago already; additionally,
-the modifications and enhancements by the vendor might be causing the issue you
-face, even if they look small or totally unrelated. That's why you should report
-issues with these kernels to the vendor. Its developers should look into the
-report and, in case it turns out to be an upstream issue, fix it directly
-upstream or forward the report there. In practice that often does not work out
-or might not what you want. You thus might want to consider circumventing the
-vendor by installing the very latest Linux kernel core yourself. If that's an
-option for you move ahead in this process, as a later step in this guide will
-explain how to do that once it rules out other potential causes for your issue.
+  That is partly because most vendors ship kernels ancient and unsupported from the point of upstream development -- a bug you face with such a kernel might have been fixed upstream months or years ago already.
 
-Note, the previous paragraph is starting with the word 'most', as sometimes
-developers in fact are willing to handle reports about issues occurring with
-vendor kernels. If they do in the end highly depends on the developers and the
-issue in question. Your chances are quite good if the distributor applied only
-small modifications to a kernel based on a recent Linux version; that for
-example often holds true for the mainline kernels shipped by Debian GNU/Linux
-Sid or Fedora Rawhide. Some developers will also accept reports about issues
-with kernels from distributions shipping the latest stable kernel, as long as
-its only slightly modified; that for example is often the case for Arch Linux,
-regular Fedora releases, and openSUSE Tumbleweed. But keep in mind, you better
-want to use a mainline Linux and avoid using a stable kernel for this
-process, as outlined in the section 'Install a fresh kernel for testing' in more
-detail.
+  Many vendors furthermore also modify Linux' source code (some heavily!) before building their kernels; they often make their kernels load externally developed kernel modules ('out-of-free drivers'), too. Such modifications or enhancements might be causing the issue, even when they seem tiny and totally unrelated.
 
-Obviously you are free to ignore all this advice and report problems with an old
-or heavily modified vendor kernel to the upstream Linux developers. But note,
-those often get rejected or ignored, so consider yourself warned. But it's still
-better than not reporting the issue at all: sometimes such reports directly or
-indirectly will help to get the issue fixed over time.
+  That's why you should report issues with such kernels to the vendor. Its developers should look into the report and, in case it turns out to be an upstream issue, fix it directly upstream or forward the report there. In practice that often does not work out or might not be what you want; installing your own fresh and vanilla kernel while steering clear of externally developed modules is your way out.
 
+* Fresh vanilla kernels from "longterm" (aka "LTS") or "stable" series listed on the frontpage of kernel.org are fine for reporting regressions within their series (e.g. from 6.1.13 to 6.1.15). But longterm kernels are nearly just as unsuitable as vendor kernels for any other type of bug reporting; it's a little better with the latest "stable" series, but they are not ideal either.
 
-Search for existing reports, first run
---------------------------------------
+  That's because the primary developers of the Linux kernel are free to not care about bugs in stable or longterm kernels at all, as the latter are maintained by a dedicated set of developers which might have caused the problem with inadequate actions. This "stable team" on the other hand is not allowed to fix any bug in their kernel series, if the same issue also occurs in the mainline kernel. In the end the reporter thus has to always test a recent mainline codebase to find the right point of contact.
 
-   *Perform a rough search for existing reports with your favorite internet
-   search engine; additionally, check the archives of the Linux Kernel Mailing
-   List (LKML). If you find matching reports, join the discussion instead of
-   sending a new one.*
+Note, some developers despite these two aspects are willing to handle reports about issues in vendor or stable/longterm kernels. If they do highly depends on the individual, the issue in question as well as the kernel's age, the series it belongs to, and the modifications applied.
 
-Reporting an issue that someone else already brought forward is often a waste of
-time for everyone involved, especially you as the reporter. So it's in your own
-interest to thoroughly check if somebody reported the issue already. At this
-step of the process it's okay to just perform a rough search: a later step will
-tell you to perform a more detailed search once you know where your issue needs
-to be reported to. Nevertheless, do not hurry with this step of the reporting
-process, it can save you time and trouble.
+Your chances are quite good, if the vendor performed only small changes to a recent mainline Linux; that for example often holds true for the kernels shipped by Debian GNU/Linux Sid or Fedora Rawhide. Some developers also accept reports about issues with the recent kernel from the latest stable series; some even when it is such a kernel from a distribution that applied small modifications. This for example is often the case for Arch Linux, regular Fedora releases, and openSUSE Tumbleweed. Bug reports with longterm kernels can be successful, but in the end often are not -- unless of course it's a report about a regression within that series that does not happen with mainline.
 
-Simply search the internet with your favorite search engine first. Afterwards,
-search the `Linux Kernel Mailing List (LKML) archives
-<https://lore.kernel.org/lkml/>`_.
+You are free to ignore this advice and report problems to the upstream Linux developers that occur with kernels more than a few weeks old, modified, or utilizing out-of-tree drivers. But be aware that developers might react brusquely or never at all. Nevertheless it's still better than not reporting the issue: sometimes such a report directly or indirectly will help to resolve an issue over time.
 
-If you get flooded with results consider telling your search engine to limit
-search timeframe to the past month or year. And wherever you search, make sure
-to use good search terms; vary them a few times, too. While doing so try to
-look at the issue from the perspective of someone else: that will help you to
-come up with other words to use as search terms. Also make sure not to use too
-many search terms at once. Remember to search with and without information like
-the name of the kernel driver or the name of the affected hardware component.
-But its exact brand name (say 'ASUS Red Devil Radeon RX 5700 XT Gaming OC')
-often is not much helpful, as it is too specific. Instead try search terms like
-the model line (Radeon 5700 or Radeon 5000) and the code name of the main chip
-('Navi' or 'Navi10') with and without its manufacturer ('AMD').
+Skim the logs
+-------------
 
-In case you find an existing report about your issue, join the discussion, as
-you might be able to provide valuable additional information. That can be
-important even when a fix is prepared or in its final stages already, as
-developers might look for people that can provide additional information or
-test a proposed fix. Jump to the section 'Duties after the report went out' for
-details on how to get properly involved.
+ *Skim ``journalctl -k`` (alternatively: ``dmesg``) for failures and warnings, as those might indicate what is wrong.*
 
-Note, searching `bugzilla.kernel.org <https://bugzilla.kernel.org/>`_ might also
-be a good idea, as that might provide valuable insights or turn up matching
-reports. If you find the latter, just keep in mind: most subsystems expect
-reports in different places, as described below in the section "Check where you
-need to report your issue". The developers that should take care of the issue
-thus might not even be aware of the bugzilla ticket. Hence, check the ticket if
-the issue already got reported as outlined in this document and if not consider
-doing so.
+Sometimes the bug you face is just a symptom of something going sideways the kernel kernel detected and logged. To rule that out, check the kernel's log messages. Preferably use journalctl if your distribution supports it, as it's guaranteed to contain all messages since the kernel started -- which is not the case for dmesg.
 
-
-Issue of high priority?
------------------------
-
-   *See if the issue you are dealing with qualifies as regression, security
-   issue, or a really severe problem: those are 'issues of high priority' that
-   need special handling in some steps that are about to follow.*
-
-Linus Torvalds and the leading Linux kernel developers want to see some issues
-fixed as soon as possible, hence there are 'issues of high priority' that get
-handled slightly differently in the reporting process. Three type of cases
-qualify: regressions, security issues, and really severe problems.
-
-You deal with a regression if some application or practical use case running
-fine with one Linux kernel works worse or not at all with a newer version
-compiled using a similar configuration. The document
-Documentation/admin-guide/reporting-regressions.rst explains this in more
-detail. It also provides a good deal of other information about regressions you
-might want to be aware of; it for example explains how to add your issue to the
-list of tracked regressions, to ensure it won't fall through the cracks.
-
-What qualifies as security issue is left to your judgment. Consider reading
-Documentation/process/security-bugs.rst before proceeding, as it
-provides additional details how to best handle security issues.
-
-An issue is a 'really severe problem' when something totally unacceptably bad
-happens. That's for example the case when a Linux kernel corrupts the data it's
-handling or damages hardware it's running on. You're also dealing with a severe
-issue when the kernel suddenly stops working with an error message ('kernel
-panic') or without any farewell note at all. Note: do not confuse a 'panic' (a
-fatal error where the kernel stop itself) with a 'Oops' (a recoverable error),
-as the kernel remains running after the latter.
-
-
-Ensure a healthy environment
-----------------------------
-
-  *Make sure it's not the kernel's surroundings that are causing the issue
-  you face.*
-
-Problems that look a lot like a kernel issue are sometimes caused by build or
-runtime environment. It's hard to rule out that problem completely, but you
-should minimize it:
-
-* Use proven tools when building your kernel, as bugs in the compiler or the
-  binutils can cause the resulting kernel to misbehave.
-
-* Ensure your computer components run within their design specifications;
-  that's especially important for the main processor, the main memory, and the
-  motherboard. Therefore, stop undervolting or overclocking when facing a
-  potential kernel issue.
-
-* Try to make sure it's not faulty hardware that is causing your issue. Bad
-  main memory for example can result in a multitude of issues that will
-  manifest itself in problems looking like kernel issues.
-
-* If you're dealing with a filesystem issue, you might want to check the file
-  system in question with ``fsck``, as it might be damaged in a way that leads
-  to unexpected kernel behavior.
-
-* When dealing with a regression, make sure it's not something else that
-  changed in parallel to updating the kernel. The problem for example might be
-  caused by other software that was updated at the same time. It can also
-  happen that a hardware component coincidentally just broke when you rebooted
-  into a new kernel for the first time. Updating the systems BIOS or changing
-  something in the BIOS Setup can also lead to problems that on look a lot
-  like a kernel regression.
-
-
-Prepare for emergencies
------------------------
-
-  *Create a fresh backup and put system repair and restore tools at hand.*
-
-Reminder, you are dealing with computers, which sometimes do unexpected things,
-especially if you fiddle with crucial parts like the kernel of its operating
-system. That's what you are about to do in this process. Thus, make sure to
-create a fresh backup; also ensure you have all tools at hand to repair or
-reinstall the operating system as well as everything you need to restore the
-backup.
-
-
-Make sure your kernel doesn't get enhanced
-------------------------------------------
-
-  *Ensure your system does not enhance its kernels by building additional
-  kernel modules on-the-fly, which solutions like DKMS might be doing locally
-  without your knowledge.*
-
-The risk your issue report gets ignored or rejected dramatically increases if
-your kernel gets enhanced in any way. That's why you should remove or disable
-mechanisms like akmods and DKMS: those build add-on kernel modules
-automatically, for example when you install a new Linux kernel or boot it for
-the first time. Also remove any modules they might have installed. Then reboot
-before proceeding.
-
-Note, you might not be aware that your system is using one of these solutions:
-they often get set up silently when you install Nvidia's proprietary graphics
-driver, VirtualBox, or other software that requires a some support from a
-module not part of the Linux kernel. That why your might need to uninstall the
-packages with such software to get rid of any 3rd party kernel module.
+Especially look out for messages in bolt or some other color than black, as both tools use such formatting to highlight errors and warnings.
 
 
 Check 'taint' flag
 ------------------
 
-  *Check if your kernel was 'tainted' when the issue occurred, as the event
-  that made the kernel set this flag might be causing the issue you face.*
+  *Check if the kernel was already 'tainted' when the issue first occurred: the event that led to this flag being set might cause your issue, even if it looks totally unrelated.*
 
 The kernel marks itself with a 'taint' flag when something happens that might
 lead to follow-up errors that look totally unrelated. The issue you face might
 be such an error if your kernel is tainted. That's why it's in your interest to
-rule this out early before investing more time into this process. This is the
-only reason why this step is here, as this process later will tell you to
-install the latest mainline kernel; you will need to check the taint flag again
-then, as that's when it matters because it's the kernel the report will focus
-on.
+ preparing a report. This is the only reason why this step is here, as you most likely will have to install a different kernel for reporting later; that's when the flag matters for real.
 
 On a running system is easy to check if the kernel tainted itself: if ``cat
-/proc/sys/kernel/tainted`` returns '0' then the kernel is not tainted and
-everything is fine. Checking that file is impossible in some situations; that's
+/proc/sys/kernel/tainted`` returns '0'
+it
+is not tainted.
+
+Checking that file is impossible in some situations; that's
 why the kernel also mentions the taint status when it reports an internal
 problem (a 'kernel bug'), a recoverable error (a 'kernel Oops') or a
 non-recoverable error before halting operation (a 'kernel panic'). Look near
@@ -415,11 +212,12 @@ three things:
    point. In that case check your kernel or system log and look for a section
    that starts with this::
 
-     Oops: 0000 [#1] SMP
+ 	Oops: 0000 [#1] SMP
 
    That's the first Oops since boot-up, as the '#1' between the brackets shows.
-   Every Oops and any other problem that happens after that point might be a
-   follow-up problem to that first Oops, even if both look totally unrelated.
+   Every Oops and any other problem that happens after that point might be
+   a follow-up problem
+  that would never have happened without that first Oops, even if both look totally unrelated.
    Rule this out by getting rid of the cause for the first Oops and reproducing
    the issue afterwards. Sometimes simply restarting will be enough, sometimes
    a change to the configuration followed by a reboot can eliminate the Oops.
@@ -427,10 +225,7 @@ three things:
    the cause for the Oops might already be fixed in the newer Linux kernel
    version you are going to install later in this process.
 
-2. Your system uses a software that installs its own kernel modules, for
-   example Nvidia's proprietary graphics driver or VirtualBox. The kernel
-   taints itself when it loads such module from external sources (even if
-   they are Open Source): they sometimes cause errors in unrelated kernel
+2. Your system uses software that installs externally developed kernel modules, for example Nvidia's proprietary graphics driver, OpenZFS or VirtualBox. The kernel taints itself when it loads such modules -- no matter what license they use, as they sometimes cause errors in unrelated kernel
    areas and thus might be causing the issue you face. You therefore have to
    prevent those modules from loading when you want to report an issue to the
    Linux kernel developers. Most of the time the easiest way to do that is:
@@ -441,11 +236,98 @@ three things:
    the staging tree of the Linux kernel source. That's a special area for
    code (mostly drivers) that does not yet fulfill the normal Linux kernel
    quality standards. When you report an issue with such a module it's
-   obviously okay if the kernel is tainted; just make sure the module in
+   totally okay if the kernel is tainted; just make sure the module in
    question is the only reason for the taint. If the issue happens in an
-   unrelated area reboot and temporarily block the module from being loaded
-   by specifying ``foo.blacklist=1`` as kernel parameter (replace 'foo' with
+   unrelated area
+   , better
+   reboot and temporarily block the module from being
+   loaded by specifying ``foo.blacklist=1`` as kernel parameter (replace 'foo' with
    the name of the module in question).
+
+
+Ensure a the environment is healthy
+-----------------------------------
+
+   *Consider some glitch in your kernel's environment makes it misbehave [...]*
+
+Problems that look like a kernel issue are sometimes caused by its environment. It's hard to rule out external causes completely, but it is wise to consider them before moving on:
+
+* Try to make sure it's not faulty hardware that is causing your issue. Bad main memory for example can result in a multitude of issues that will manifest itself in problems looking like kernel issues.
+
+* Ensure your computer components run within their design specifications;
+  that's especially important for the main processor, the main memory, and the
+  motherboard. Therefore, stop undervolting or overclocking when facing a
+  potential kernel issue.
+
+* Temporarily remove any optional kernel parameters that you normally use, they might enable unsupported or experimental features.
+
+* Maybe something went sideways when the initramfs was build.
+
+* If you're dealing with a filesystem issue, you might want to check the file
+  system in question with ``fsck``, as it might be damaged in a way that leads
+  to unexpected kernel behavior.
+
+ * Use proven tools when building your kernel, as bugs in the compiler or the
+   binutils can cause the resulting kernel to misbehave.
+
+* When dealing with a regression (e.g. something stopped working or works worse after updating the kernel), make sure it's not something else that changed or updates in parallel. This for example can be a change in the BIOS-Setup, an update of the BIOS, the linux-firmware package, or some other components of your Linux distribution. It can also
+   into a new kernel for the first time. Updating the systems BIOS or changing
+   something in the BIOS Setup can also lead to problems that look a lot
+   like a kernel regression.
+
+Search for existing reports and fixes
+-------------------------------------
+
+ *!!!.*
+
+Reporting an issue anew someone else already brought forward or fixed is often a waste of time for everyone involved, including the reporter. So it's in your own interest to thoroughly check for existing reports and fixes:
+
+* If you get flooded with results while searching lore and the web, consider telling your search engine to limit the search timeframe to the past few months or the last year.
+
+* Wherever you search, make sure to use good search terms; vary them a few times, too. While doing so try to look at the issue from the perspective of someone else: that will help you to come up with other words to use as search terms.
+
+* Remember to search with and without information like the name of the kernel driver or the name of the affected hardware component. But its exact brand name (say 'ASUS Red Devil Radeon RX 5700 XT Gaming OC') often is not very helpful, as it is quite specific. Instead try search terms like the model line (Radeon 5700 or Radeon 5000) and the code name of the main chip ('Navi' or 'Navi10') with and without its manufacturer of the main chip ('AMD').
+
+If you find fixes, give them a try.
+
+Did you find matching reports or potential, but unsuccessful fixes? In that case look closely and evaluate if the reports or fixes might be about a different issue with similar symptoms. If that seems likely, ignore them and proceed with this guide, but briefly mention those reports in your report later. If you are unsure, send a short reply to the earlier report of fixes; in it briefly outline the problem while asking if that looks like the same or a different problem that should be reported in a new thread or ticket to avoid confusion.
+
+If you find a report that matches perfectly, join the discussion, as you might be able to provide valuable additional information. That can be important even when a fix is prepared or in its final stages already, as developers might look for people that can provide additional information or test a proposed fix. Jump to the section 'Duties after the report went out' for details on how to get properly involved.
+
+Note, when spotting matching reports on `bugzilla.kernel.org <https://bugzilla.kernel.org/>`_ keep in mind that the appropriate developers for the bug might not yet be aware of the ticket, as bugzilla does not know who they are. It lacks these details for most of the kernel's subsystem, as they expect reports in different places -- "Check where you need to report your issue to" describes this in more detail. If in doubt, ask in the ticket; if no reassuring answer is forthcoming, report the issue briefly through the proper channel while mentioning the bugzilla ticket.
+
+Issue of high priority?
+-----------------------
+
+    *See if the issue you are dealing with qualifies as regression, security
+    issue, or a really severe problem: those are 'issues of high priority' that
+    need special handling in some steps that are about to follow.*
+
+Linus Torvalds and the leading Linux kernel developers want some issues
+ to be handled with 'higher priority' that thus need special care during this guide.
+Three types of cases qualify: regressions, security issues, and really
+severe problems:
+
+* You deal with a regression if some application or practical use case running
+fine with one Linux kernel works worse or not at all with a newer version
+compiled using a similar configuration. The document
+Documentation/admin-guide/reporting-regressions.rst explains this in more
+detail. It also provides a good deal of other information about regressions you
+might want to be aware of; it for example explains how to add your issue to the
+list of tracked regressions, to ensure it won't fall through the cracks.
+
+* What qualifies as security issue is left to your judgment. Consider reading
+Documentation/process/security-bugs.rst before proceeding, as it
+provides additional details how to best handle security issues.
+
+* An issue is a 'really severe problem' when something totally unacceptably bad
+happens. That's for example the case when a Linux kernel corrupts the data it's
+handling or damages hardware it's running on. You're also dealing with a severe
+issue when the kernel suddenly stops working with an error message ('kernel
+panic') or without any farewell note at all. Note: do not confuse a 'panic' (a
+fatal error where the kernel stop itself) with a 'Oops' (a recoverable error),
+as the kernel remains running after the latter.
+
 
 
 Document how to reproduce issue
@@ -558,12 +440,12 @@ but before doing so, try a somewhat shorted or modified name when searching the
 MAINTAINERS file, as then you might find something like this::
 
    QUALCOMM ATHEROS ATH10K WIRELESS DRIVER
-   Mail:          A. Some Human <shuman@example.com>
+   Mail:      	A. Some Human <shuman@example.com>
    Mailing list:  ath10k@lists.infradead.org
-   Status:        Supported
-   Web-page:      https://wireless.wiki.kernel.org/en/users/Drivers/ath10k
-   SCM:           git git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
-   Files:         drivers/net/wireless/ath/ath10k/
+   Status:    	Supported
+   Web-page:  	https://wireless.wiki.kernel.org/en/users/Drivers/ath10k
+   SCM:       	git git://git.kernel.org/pub/scm/linux/kernel/git/kvalo/ath.git
+   Files:     	drivers/net/wireless/ath/ath10k/
 
 Note: the line description will be abbreviations, if you read the plain
 MAINTAINERS file found in the root of the Linux source tree. 'Mail:' for
@@ -1082,7 +964,7 @@ few suggestions what often is good to provide:
   If one of the DRM drivers misbehaves, you want to state the versions of
   libdrm and Mesa; also specify your Wayland compositor or the X-Server and
   its driver. If you have a filesystem issue, mention the version of
-  corresponding filesystem utilities (e2fsprogs, btrfs-progs, xfsprogs, ...).
+  corresponding file system utilities (e2fsprogs, btrfs-progs, xfsprogs, ...).
 
 * Gather additional information from the kernel that might be of interest. The
   output from ``lspci -nn`` will for example help others to identify what
@@ -1108,7 +990,9 @@ The important part: the head of your report
 Now that you have the detailed part of the report prepared let's get to the
 most important section: the first few sentences. Thus go to the top, add
 something like 'The detailed description:' before the part you just wrote and
-insert two newlines at the top. Now write one normal length paragraph that
+insert two
+newlines
+at the top. Now write one normal length paragraph that
 describes the issue roughly. Leave out all boring details and focus on the
 crucial parts readers need to know to understand what this is all about; if you
 think this bug affects a lot of users, mention this to get people interested.
@@ -1211,7 +1095,7 @@ to your report: go to your mail applications 'Sent' folder and use 'reply-all'
 on your mail with the report. This approach will make sure the public mailing
 list(s) and everyone else that gets involved over time stays in the loop; it
 also keeps the mail thread intact, which among others is really important for
-mailing lists to group all related mails together.
+mailing lists to group all related emails together.
 
 There are just two situations where a comment in a bug tracker or a 'Reply-all'
 is unsuitable:
@@ -1231,12 +1115,12 @@ Linux kernel sources to test if it helps. In some cases it will be fine sending
 a reply asking for instructions how to do that. But before going that route try
 to find the answer own your own by searching the internet; alternatively
 consider asking in other places for advice. For example ask a friend or post
-about it to a chatroom or forum you normally hang out.
+about it to a chat room or forum you normally hang out.
 
 **Be patient**: If you are really lucky you might get a reply to your report
 within a few hours. But most of the time it will take longer, as maintainers
 are scattered around the globe and thus might be in a different time zone – one
-where they already enjoy their night away from keyboard.
+where they already enjoy their night away from the keyboard.
 
 In general, kernel developers will take one to five business days to respond to
 reports. Sometimes it will take longer, as they might be busy with the merge
@@ -1251,11 +1135,11 @@ before sending a friendly reminder.
 Sometimes the maintainer might not be responding in a timely manner; other
 times there might be disagreements, for example if an issue qualifies as
 regression or not. In such cases raise your concerns on the mailing list and
-ask others for public or private replies how to move on. If that fails, it
+ask others for public or private replies on how to move on. If that fails, it
 might be appropriate to get a higher authority involved. In case of a WiFi
 driver that would be the wireless maintainers; if there are no higher level
 maintainers or all else fails, it might be one of those rare situations where
-it's okay to get Linus Torvalds involved.
+It is okay to get Linus Torvalds involved.
 
 **Proactive testing**: Every time the first pre-release (the 'rc1') of a new
 mainline kernel version gets released, go and check if the issue is fixed there
@@ -1294,7 +1178,7 @@ wait; that outcome is even likely if you do not provide the information within
 a few business days.
 
 **Requests for testing**: When you are asked to test a diagnostic patch or a
-possible fix, try to test it in timely manner, too. But do it properly and make
+possible fix, try to test it in a timely manner, too. But do it properly and make
 sure to not rush it: mixing things up can happen easily and can lead to a lot
 of confusion for everyone involved. A common mistake for example is thinking a
 proposed patch with a fix was applied, but in fact wasn't. Things like that
@@ -1314,14 +1198,14 @@ your report arrived or had something more important to take care of. When
 writing the reminder, kindly ask if anything else from your side is needed to
 get the ball running somehow. If the report got out by mail, do that in the
 first lines of a mail that is a reply to your initial mail (see above) which
-includes a full quote of the original report below: that's on of those few
+includes a full quote of the original report below: that's one of those few
 situations where such a 'TOFU' (Text Over, Fullquote Under) is the right
 approach, as then all the recipients will have the details at hand immediately
 in the proper order.
 
-After the reminder wait three more weeks for replies. If you still don't get a
+After the reminder, wait three more weeks for replies. If you still don't get a
 proper reaction, you first should reconsider your approach. Did you maybe try
-to reach out to the wrong people? Was the report maybe offensive or so
+to reach out to the wrong people? Was the report possibly offensive or so
 confusing that people decided to completely stay away from it? The best way to
 rule out such factors: show the report to one or two people familiar with FLOSS
 issue reporting and ask for their opinion. Also ask them for their advice how
@@ -1363,108 +1247,6 @@ option should get fixed. Maybe together you can also narrow down the root cause
 or the change that introduced a regression, which often makes developing a fix
 easier. And with a bit of luck there might be someone in the team that knows a
 bit about programming and might be able to write a fix.
-
-
-Reference for "Reporting regressions within a stable and longterm kernel line"
-------------------------------------------------------------------------------
-
-This subsection provides details for the steps you need to perform if you face
-a regression within a stable and longterm kernel line.
-
-Make sure the particular version line still gets support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  *Check if the kernel developers still maintain the Linux kernel version
-  line you care about: go to the front page of kernel.org and make sure it
-  mentions the latest release of the particular version line without an
-  '[EOL]' tag.*
-
-Most kernel version lines only get supported for about three months, as
-maintaining them longer is quite a lot of work. Hence, only one per year is
-chosen and gets supported for at least two years (often six). That's why you
-need to check if the kernel developers still support the version line you care
-for.
-
-Note, if kernel.org lists two stable version lines on the front page, you
-should consider switching to the newer one and forget about the older one:
-support for it is likely to be abandoned soon. Then it will get a "end-of-life"
-(EOL) stamp. Version lines that reached that point still get mentioned on the
-kernel.org front page for a week or two, but are unsuitable for testing and
-reporting.
-
-Search stable mailing list
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  *Check the archives of the Linux stable mailing list for existing reports.*
-
-Maybe the issue you face is already known and was fixed or is about to. Hence,
-`search the archives of the Linux stable mailing list
-<https://lore.kernel.org/stable/>`_ for reports about an issue like yours. If
-you find any matches, consider joining the discussion, unless the fix is
-already finished and scheduled to get applied soon.
-
-Reproduce issue with the newest release
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  *Install the latest release from the particular version line as a vanilla
-  kernel. Ensure this kernel is not tainted and still shows the problem, as
-  the issue might have already been fixed there. If you first noticed the
-  problem with a vendor kernel, check a vanilla build of the last version
-  known to work performs fine as well.*
-
-Before investing any more time in this process you want to check if the issue
-was already fixed in the latest release of version line you're interested in.
-This kernel needs to be vanilla and shouldn't be tainted before the issue
-happens, as detailed outlined already above in the section "Install a fresh
-kernel for testing".
-
-Did you first notice the regression with a vendor kernel? Then changes the
-vendor applied might be interfering. You need to rule that out by performing
-a recheck. Say something broke when you updated from 5.10.4-vendor.42 to
-5.10.5-vendor.43. Then after testing the latest 5.10 release as outlined in
-the previous paragraph check if a vanilla build of Linux 5.10.4 works fine as
-well. If things are broken there, the issue does not qualify as upstream
-regression and you need switch back to the main step-by-step guide to report
-the issue.
-
-Report the regression
-~~~~~~~~~~~~~~~~~~~~~
-
-  *Send a short problem report to the Linux stable mailing list
-  (stable@vger.kernel.org) and CC the Linux regressions mailing list
-  (regressions@lists.linux.dev); if you suspect the cause in a particular
-  subsystem, CC its maintainer and its mailing list. Roughly describe the
-  issue and ideally explain how to reproduce it. Mention the first version
-  that shows the problem and the last version that's working fine. Then
-  wait for further instructions.*
-
-When reporting a regression that happens within a stable or longterm kernel
-line (say when updating from 5.10.4 to 5.10.5) a brief report is enough for
-the start to get the issue reported quickly. Hence a rough description to the
-stable and regressions mailing list is all it takes; but in case you suspect
-the cause in a particular subsystem, CC its maintainers and its mailing list
-as well, because that will speed things up.
-
-And note, it helps developers a great deal if you can specify the exact version
-that introduced the problem. Hence if possible within a reasonable time frame,
-try to find that version using vanilla kernels. Lets assume something broke when
-your distributor released a update from Linux kernel 5.10.5 to 5.10.8. Then as
-instructed above go and check the latest kernel from that version line, say
-5.10.9. If it shows the problem, try a vanilla 5.10.5 to ensure that no patches
-the distributor applied interfere. If the issue doesn't manifest itself there,
-try 5.10.7 and then (depending on the outcome) 5.10.8 or 5.10.6 to find the
-first version where things broke. Mention it in the report and state that 5.10.9
-is still broken.
-
-What the previous paragraph outlines is basically a rough manual 'bisection'.
-Once your report is out your might get asked to do a proper one, as it allows to
-pinpoint the exact change that causes the issue (which then can easily get
-reverted to fix the issue quickly). Hence consider to do a proper bisection
-right away if time permits. See the section 'Special care for regressions' and
-the document Documentation/admin-guide/bug-bisect.rst for details how to
-perform one. In case of a successful bisection add the author of the culprit to
-the recipients; also CC everyone in the signed-off-by chain, which you find at
-the end of its commit message.
 
 
 Reference for "Reporting issues only occurring in older kernel version lines"
@@ -1525,7 +1307,7 @@ Check code history and search for existing discussions
 In a lot of cases the issue you deal with will have happened with mainline, but
 got fixed there. The commit that fixed it would need to get backported as well
 to get the issue solved. That's why you want to search for it or any
-discussions abound it.
+discussions abount it.
 
 * First try to find the fix in the Git repository that holds the Linux kernel
   sources. You can do this with the web interfaces `on kernel.org
@@ -1537,7 +1319,7 @@ discussions abound it.
   If you find the fix, look if the commit message near the end contains a
   'stable tag' that looks like this:
 
-    Cc: <stable@vger.kernel.org> # 5.4+
+	Cc: <stable@vger.kernel.org> # 5.4+
 
   If that's case the developer marked the fix safe for backporting to version
   line 5.4 and later. Most of the time it's getting applied there within two
@@ -1555,13 +1337,13 @@ discussions abound it.
   outlined above, as the commit might tell you if a backport can be expected.
 
   * Check the discussions for any indicators the fix might be too risky to get
-    backported to the version line you care about. If that's the case you have
-    to live with the issue or switch to the kernel version line where the fix
-    got applied.
+	backported to the version line you care about. If that's the case you have
+	to live with the issue or switch to the kernel version line where the fix
+	got applied.
 
   * If the fix doesn't contain a stable tag and backporting was not discussed,
-    join the discussion: mention the version where you face the issue and that
-    you would like to see it fixed, if suitable.
+	join the discussion: mention the version where you face the issue and that
+	you would like to see it fixed, if suitable.
 
 
 Ask for advice
@@ -1635,13 +1417,33 @@ But don't worry too much about all of this, a lot of drivers have active
 maintainers who are quite interested in fixing as many issues as possible.
 
 
+Why reporting Linux kernel bugs is somewhat complicated
+=======================================================
+
+The Linux kernel's development model differs in a few important aspects from most other Open Source projects. Four of those peculiarities complicate bug reporting enormously:
+
+1. Developers are free to solely focus on the latest mainline kernel.
+
+2. The 'stable team' maintains stable and longterm series, but is not allowed to fix any bugs there which occur in mainline as well.
+
+3. There is no central bug tracker.
+
+4. Most kernels used in Linux distributions are unsuitable for reporting bugs upstream.
+
+Due to the first aspect some developers ignore or react coldly to reports about bugs in say Linux 6.1 when 6.2-rc1 is already out. Some developers on the other hand are perfectly fine to handle such reports. But their willingness partly depends on the bug in questions and quickly deteriorates the farther the two releases become apart. Many developers thus will not welcome reports about bugs in 6.1 once 6.2 is out.
+
+There are also developers willing to look into reports with Linux 6.1 when 6.2-rc1 is already out, but at the same time unwilling if 6.1.2 or 6.1.3 are used instead: that's because those were released by the stable team, which is why its members might have caused and have to fix the problem. The stable team can easily be in an similar, but opposite situation when it comes to reports with stable or longterm kernels: if the reporter did not specify if mainline is affected as well, its members might suspect it is a bug the regular developers have to handle.
+
+The explanation for the lack of a central bug tracker is simpler: those were not a thing when Linux started and they were never adopted, because many core developers always were and still are extremely reluctant to use web-based issue trackers. Some subsystems on the other hand see benefits in them and started using bugzilla.kernel.org or external bug trackers for their work.
+
+The kernels of most Linux distributions are unsuitable for reporting, as most of them are way too old (see above). Frequently they are also based on series the stable team stopped supporting a long time ago. Many are furthermore built from heavily modified sources and use externally developer kernel modules; those changes and add-ons frequently cause bugs not present in upstream kernels, which is another reason why most upstream Linux developers will not look into reports from such kernels.
+
+
 Closing words
 =============
 
 Compared with other Free/Libre & Open Source Software it's hard to report
-issues to the Linux kernel developers: the length and complexity of this
-document and the implications between the lines illustrate that. But that's how
-it is for now. The main author of this text hopes documenting the state of the
+issues to the Linux kernel developers: the length and complexity of this document and the implications between the lines illustrate that. But that's how it is for now. The primary author of this text hopes documenting the state of the
 art will lay some groundwork to improve the situation over time.
 
 
@@ -1666,3 +1468,5 @@ art will lay some groundwork to improve the situation over time.
    is available under CC-BY-4.0, as versions of this text that were processed
    (for example by the kernel's build system) might contain content taken from
    files which use a more restrictive license.
+
+
