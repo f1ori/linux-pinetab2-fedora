@@ -1,3 +1,8 @@
+* Sat Apr 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc3.20240413gt8f2c0577.34.vanilla]
+- import ark-infra from ark-infra-mainline-latest (9edfdc6fdb4) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc3.20240413gt8f2c0577
+Resolves: 
+
 * Fri Apr 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc3.586b5dfb51b9.34]
 - Use LLVM=1 for clang_lto build (Nikita Popov)
 - redhat: fix def_variants.yaml check (Jan Stancek)
