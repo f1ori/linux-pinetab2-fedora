@@ -1,3 +1,8 @@
+* Sat Apr 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.6-50.vanilla]
+- import ark-infra from ark-infra-stable-6.8 (90620d0b747) (Thorsten Leemhuis)
+- Linux v6.8.6
+Resolves: 
+
 * Wed Apr 10 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.8.5-0]
 - Set configs for SPECTRE_BHI (Justin M. Forbes)
 - Add AMD PMF bug (Justin M. Forbes)
