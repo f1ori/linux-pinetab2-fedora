@@ -1,6 +1,6 @@
-* Sat Apr 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc3.20240413gt8f2c0577.34.vanilla]
-- import ark-infra from ark-infra-mainline-latest (9edfdc6fdb4) (Thorsten Leemhuis)
-- Linux v6.9.0-0.rc3.20240413gt8f2c0577
+* Sat Apr 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc3.8f2c057754b2.35]
+- docs: point out that python3-pyyaml is now required (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc3.8f2c057754b2
 Resolves: 
 
 * Fri Apr 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc3.586b5dfb51b9.34]
