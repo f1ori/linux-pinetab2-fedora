@@ -1,5 +1,7 @@
-* Sat Apr 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.6-50.vanilla]
-- import ark-infra from ark-infra-stable-6.8 (90620d0b747) (Thorsten Leemhuis)
+* Sat Apr 13 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.8.6-0]
+- nouveau: fix devinit paths to only handle display on GSP. (Dave Airlie)
+- Add bluetooth bug to Bugsfixed for 6.8.6 (Justin M. Forbes)
+- Bluetooth: l2cap: Don't double set the HCI_CONN_MGMT_CONNECTED bit (Archie Pusaka)
 - Linux v6.8.6
 Resolves: 
 
