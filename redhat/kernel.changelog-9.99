@@ -1,3 +1,8 @@
+* Fri Apr 19 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc4.20240419gt2668e3ae.40.vanilla]
+- import ark-infra from ark-infra-mainline-latest (77db6b73f16) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc4.20240419gt2668e3ae
+Resolves: 
+
 * Thu Apr 18 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc4.8cd26fd90c1a.40]
 - Turn on UBSAN for Fedora (Justin M. Forbes)
 - Linux v6.9.0-0.rc4.8cd26fd90c1a
