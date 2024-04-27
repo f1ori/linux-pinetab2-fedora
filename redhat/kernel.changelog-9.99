@@ -1,3 +1,8 @@
+* Sat Apr 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.8-50.vanilla]
+- import ark-infra from ark-infra-stable-6.8 (09c922fd3a1) (Thorsten Leemhuis)
+- Linux v6.8.8
+Resolves: 
+
 * Wed Apr 17 2024 Augusto Caringi <acaringi@redhat.com> [6.8.7-0]
 - redhat/configs: Enable CONFIG_MITIGATION_SPECTRE_BHI (Augusto Caringi)
 - Turn on XEN_BALLOON_MEMORY_HOTPLUG for Fedora (Justin M. Forbes)
