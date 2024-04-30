@@ -1,3 +1,8 @@
+* Tue Apr 30 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc6.20240430gt98369dcc.51.vanilla]
+- import ark-infra from ark-infra-mainline-latest (cac82465c6d) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc6.20240430gt98369dcc
+Resolves: 
+
 * Mon Apr 29 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc6.51]
 - gitlab-ci: enable pipelines with c10s buildroot (Michael Hofmann)
 - Linux v6.9.0-0.rc6
