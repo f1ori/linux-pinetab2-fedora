@@ -1,3 +1,8 @@
+* Wed May 01 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc6.20240501gt18daea77.52.vanilla]
+- import ark-infra from ark-infra-mainline-latest (4b7b98a55d8) (Thorsten Leemhuis)
+- Linux v6.9.0-0.rc6.20240501gt18daea77
+Resolves: 
+
 * Tue Apr 30 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc6.52]
 - kernel.spec: adjust for livepatching kselftests (Joe Lawrence)
 - redhat/configs: remove CONFIG_TEST_LIVEPATCH (Joe Lawrence)
