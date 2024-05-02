@@ -1,5 +1,9 @@
-* Sat Apr 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.8-50.vanilla]
-- import ark-infra from ark-infra-stable-6.8 (09c922fd3a1) (Thorsten Leemhuis)
+* Sat Apr 27 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.8.8-0]
+- Update BugsFixed for 6.8.8 (Justin M. Forbes)
+- Turn on ISM for Fedora (Justin M. Forbes)
+- Turn off some Fedora UBSAN options to avoid false positives (Justin M. Forbes)
+- fedora: aarch64: Enable a QCom Robotics platforms requirements (Peter Robinson)
+- Turn on UBSAN for Fedora (Justin M. Forbes)
 - Linux v6.8.8
 Resolves: 
 
