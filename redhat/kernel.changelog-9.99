@@ -1,3 +1,8 @@
+* Fri May 03 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.0.next.20240503.55.vanilla]
+- import ark-infra from ark-infra-next-latest (ca5c612ae1b) (Thorsten Leemhuis)
+- Linux v6.9.0-0.0.next.20240503
+Resolves: 
+
 * Thu May 02 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc6.0106679839f7.55]
 - redhat: Use redhatsecureboot701 for ppc64le (Jan Stancek)
 - redhat: switch the kernel package to use certs from system-sb-certs (Jan Stancek)
