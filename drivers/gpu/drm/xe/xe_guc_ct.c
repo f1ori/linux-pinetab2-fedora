@@ -150,6 +150,10 @@ int xe_guc_ct_init(struct xe_guc_ct *ct)
 	if (!ct->g2h_wq)
 		return -ENOMEM;
 
+	ct->g2h_wq = alloc_ordered_workqueue("xe-g2h-wq", 0);
+	if (!ct->g2h_wq)
+		return -ENOMEM;
+
 	spin_lock_init(&ct->fast_lock);
 	xa_init(&ct->fence_lookup);
 	INIT_WORK(&ct->g2h_worker, g2h_worker_func);
