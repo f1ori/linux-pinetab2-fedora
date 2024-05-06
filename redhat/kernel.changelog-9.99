@@ -1,3 +1,8 @@
+* Mon May 06 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.0.next.20240506.57.vanilla]
+- import ark-infra from ark-infra-next-latest (02dc41b7de0) (Thorsten Leemhuis)
+- Linux v6.9.0-0.0.next.20240506
+Resolves: 
+
 * Sat May 04 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc6.7367539ad4b0.57]
 - Set DEBUG_INFO_BTF_MODULES for Fedora (Justin M. Forbes)
 - Linux v6.9.0-0.rc6.7367539ad4b0
