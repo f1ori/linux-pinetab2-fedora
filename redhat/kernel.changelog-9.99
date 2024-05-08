@@ -1,3 +1,9 @@
+* Wed May 08 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.0.next.20240508.59.vanilla]
+- import ark-infra from ark-infra-next-latest (a2e4ceb1e32) (Thorsten Leemhuis)
+- iommu/arm-smmu-v3: Make the kunit into a module (Jason Gunthorpe)
+- Linux v6.9.0-0.0.next.20240508
+Resolves: 
+
 * Tue May 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.dccb07f2914c.59]
 - redhat/rhel_files: move tipc.ko and tipc_diag.ko to modules-extra (Xin Long) [RHEL-23931]
 - redhat: move amd-pstate-ut.ko to modules-internal (Jan Stancek)
