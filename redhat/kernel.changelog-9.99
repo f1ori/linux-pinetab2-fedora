@@ -1,3 +1,9 @@
+* Thu May 09 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.0.next.20240509.60.vanilla]
+- import ark-infra from ark-infra-next-latest (eacca9f7a7e) (Thorsten Leemhuis)
+- iommu/arm-smmu-v3: Make the kunit into a module (Jason Gunthorpe)
+- Linux v6.9.0-0.0.next.20240509
+Resolves: 
+
 * Wed May 08 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.dccb07f2914c.60]
 - Consolidate configs to common for 6.9 (Justin M. Forbes)
 Resolves: 
