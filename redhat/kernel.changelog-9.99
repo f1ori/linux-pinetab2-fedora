@@ -1,6 +1,8 @@
-* Thu May 09 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc7.20240509gt45db3ab7.60.vanilla]
-- import ark-infra from ark-infra-mainline-latest (c44fbb25fa1) (Thorsten Leemhuis)
-- Linux v6.9.0-0.rc7.20240509gt45db3ab7
+* Thu May 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.45db3ab70092.61]
+- scsi: sd: condition probe_type under RHEL_DIFFERENCES (Eric Chanudet)
+- scsi: sd: remove unused sd_probe_types (Eric Chanudet)
+- Turn on INIT_ON_ALLOC_DEFAULT_ON for Fedora (Justin M. Forbes)
+- Linux v6.9.0-0.rc7.45db3ab70092
 Resolves: 
 
 * Wed May 08 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.dccb07f2914c.60]
