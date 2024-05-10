@@ -1,3 +1,9 @@
+* Fri May 10 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.0.next.20240510.61.vanilla]
+- import ark-infra from ark-infra-next-latest (784d6a153cf) (Thorsten Leemhuis)
+- iommu/arm-smmu-v3: Make the kunit into a module (Jason Gunthorpe)
+- Linux v6.9.0-0.0.next.20240510
+Resolves: 
+
 * Thu May 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.45db3ab70092.61]
 - scsi: sd: condition probe_type under RHEL_DIFFERENCES (Eric Chanudet)
 - scsi: sd: remove unused sd_probe_types (Eric Chanudet)
