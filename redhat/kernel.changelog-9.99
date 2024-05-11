@@ -1,6 +1,6 @@
-* Fri May 10 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.0-0.rc7.20240510gt448b3fe5.61.vanilla]
-- import ark-infra from ark-infra-mainline-latest (a2be7952817) (Thorsten Leemhuis)
-- Linux v6.9.0-0.rc7.20240510gt448b3fe5
+* Fri May 10 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.448b3fe5a0ea.62]
+- redhat: make filtermods.py less verbose by default (Jan Stancek)
+- Linux v6.9.0-0.rc7.448b3fe5a0ea
 Resolves: 
 
 * Thu May 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.9.0-0.rc7.45db3ab70092.61]
