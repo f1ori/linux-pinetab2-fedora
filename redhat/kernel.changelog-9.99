@@ -1,3 +1,8 @@
+* Tue May 14 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240514.1.vanilla]
+- import ark-infra from ark-infra-next-latest (04815b1198d) (Thorsten Leemhuis)
+- Linux v6.10.0-0.0.next.20240514
+Resolves: 
+
 * Mon May 13 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.0-1]
 - Reset RHEL_RELEASE to 0 for 6.10 (Justin M. Forbes)
 - configs: move CONFIG_BLK_DEV_UBLK into rhel/configs/generic (Ming Lei)
