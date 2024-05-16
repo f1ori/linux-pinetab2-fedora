@@ -1,3 +1,8 @@
+* Thu May 16 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc0.20240516gt3c999d1a.4.vanilla]
+- import ark-infra from ark-infra-mainline-latest (56b3ef69956) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc0.20240516gt3c999d1a
+Resolves: 
+
 * Wed May 15 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.1b294a1f3561.4]
 - Fix up a mismatch for RHEL (Justin M. Forbes)
 - Linux v6.10.0-0.rc0.1b294a1f3561
