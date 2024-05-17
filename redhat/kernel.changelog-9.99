@@ -1,3 +1,8 @@
+* Fri May 17 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc0.20240517gtea5f6ad9.5.vanilla]
+- import ark-infra from ark-infra-mainline-latest (906f01950b7) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc0.20240517gtea5f6ad9
+Resolves: 
+
 * Thu May 16 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.3c999d1ae3c7.5]
 - Flip CONFIG_SND_SOC_CS35L56_SPI in pending to avoid a mismatch (Justin M. Forbes)
 - Linux v6.10.0-0.rc0.3c999d1ae3c7
