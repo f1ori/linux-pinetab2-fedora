@@ -1,3 +1,8 @@
+* Wed May 22 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240522.10.vanilla]
+- import ark-infra from ark-infra-next-latest (2ce2ad9e442) (Thorsten Leemhuis)
+- Linux v6.10.0-0.0.next.20240522
+Resolves: 
+
 * Tue May 21 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.8f6a15f095a6.10]
 - Drop kexec_load syscall support (Baoquan He)
 - Linux v6.10.0-0.rc0.8f6a15f095a6
