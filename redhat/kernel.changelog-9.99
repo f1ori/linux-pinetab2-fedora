@@ -1,3 +1,9 @@
+* Tue May 21 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.1-0]
+- Fix mismatch in IO_URING since we dropped the RHEL patch (Justin M. Forbes)
+- Set up for stable Fedora (Justin M. Forbes)
+- Linux v6.9.1
+Resolves: 
+
 * Mon May 13 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.0-1]
 - Reset RHEL_RELEASE to 0 for 6.10 (Justin M. Forbes)
 - configs: move CONFIG_BLK_DEV_UBLK into rhel/configs/generic (Ming Lei)
