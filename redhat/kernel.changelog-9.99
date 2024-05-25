@@ -1,6 +1,9 @@
-* Fri May 24 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc0.20240524gt6d69b6c1.12.vanilla]
-- import ark-infra from ark-infra-mainline-latest (5001f6fba1c) (Thorsten Leemhuis)
-- Linux v6.10.0-0.rc0.20240524gt6d69b6c1
+* Fri May 24 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.6d69b6c12fce.14]
+- Linux v6.10.0-0.rc0.6d69b6c12fce
+Resolves: 
+
+* Fri May 24 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.c760b3725e52.13]
+- redhat/configs: fedora: aarch64: Re-enable CUSE (Neal Gompa)
 Resolves: 
 
 * Thu May 23 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.c760b3725e52.12]
