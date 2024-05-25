@@ -1,3 +1,8 @@
+* Sat May 25 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.11-50.vanilla]
+- import ark-infra from ark-infra-stable-6.8 (8ec505a5ca5) (Thorsten Leemhuis)
+- Linux v6.8.11
+Resolves: 
+
 * Fri May 17 2024 Augusto Caringi <acaringi@redhat.com> [6.8.10-0]
 - redhat/configs: Enable CONFIG_DEBUG_INFO_BTF_MODULES (Augusto Caringi)
 - Add bugs to BugsFixed for 6.8.10 (Justin M. Forbes)
