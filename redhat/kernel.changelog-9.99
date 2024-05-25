@@ -1,5 +1,6 @@
-* Fri May 17 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.1-51.vanilla]
-- import ark-infra from ark-infra-stable-6.9 (04815b1198d) (Thorsten Leemhuis)
+* Tue May 21 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.1-0]
+- Fix mismatch in IO_URING since we dropped the RHEL patch (Justin M. Forbes)
+- Set up for stable Fedora (Justin M. Forbes)
 - Linux v6.9.1
 Resolves: 
 
