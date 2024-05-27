@@ -1,3 +1,8 @@
+* Sun May 26 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.2-0]
+- redhat/configs: fedora: aarch64: Re-enable CUSE (Neal Gompa)
+- Linux v6.9.2
+Resolves: 
+
 * Tue May 21 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.1-0]
 - Fix mismatch in IO_URING since we dropped the RHEL patch (Justin M. Forbes)
 - Set up for stable Fedora (Justin M. Forbes)
