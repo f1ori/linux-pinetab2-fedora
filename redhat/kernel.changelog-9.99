@@ -1,7 +1,9 @@
-* Mon May 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc1.16.vanilla]
-- import ark-infra from ark-infra-mainline-latest (b63615d6e37) (Thorsten Leemhuis)
+* Mon May 27 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc1.17]
+- redhat: Switch UKI to using its own SecureBoot cert (from system-sb-certs) (Jan Stancek)
+- redhat: Add RHEL specifc .sbat section to UKI (Jan Stancek)
+- kernel.spec: add iommu selftests to kernel-selftests-internal (Eder Zulian) [RHEL-32895]
 - Linux v6.10.0-0.rc1
-Resolves: 
+Resolves: RHEL-32895
 
 * Sun May 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc0.c13320499ba0.16]
 - Linux v6.10.0-0.rc0.c13320499ba0
