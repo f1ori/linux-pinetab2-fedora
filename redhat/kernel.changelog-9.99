@@ -1,5 +1,7 @@
-* Sat May 25 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.8.11-50.vanilla]
-- import ark-infra from ark-infra-stable-6.8 (8ec505a5ca5) (Thorsten Leemhuis)
+* Sun May 26 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.8.11-0]
+- redhat/configs: fedora: aarch64: Re-enable CUSE (Neal Gompa)
+- Remove f38 from release_targets (Justin M. Forbes)
+- Add more Bugs addressed by 6.8.10 to BugsFixed (Justin M. Forbes)
 - Linux v6.8.11
 Resolves: 
 
