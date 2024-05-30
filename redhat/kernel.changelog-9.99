@@ -1,5 +1,5 @@
-* Sat May 25 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.2-50.vanilla]
-- import ark-infra from ark-infra-stable-6.9 (7564fccc850) (Thorsten Leemhuis)
+* Sun May 26 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.2-0]
+- redhat/configs: fedora: aarch64: Re-enable CUSE (Neal Gompa)
 - Linux v6.9.2
 Resolves: 
 
