@@ -1,6 +1,11 @@
-* Thu May 30 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc1.20240530gt4a4be1ad.19.vanilla]
-- import ark-infra from ark-infra-mainline-latest (107c81b138f) (Thorsten Leemhuis)
-- Linux v6.10.0-0.rc1.20240530gt4a4be1ad
+* Fri May 31 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc1.4a4be1ad3a6e.21]
+- redhat: Build IMA CA certificate into the Fedora kernel (Coiby Xu)
+- Move CONFIG_RAS_FMPM to the proper location (Aristeu Rozanski)
+- redhat/configs: Remove CONFIG_NET_ACT_IPT (Ivan Vecera)
+Resolves: 
+
+* Thu May 30 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc1.4a4be1ad3a6e.20]
+- Linux v6.10.0-0.rc1.4a4be1ad3a6e
 Resolves: 
 
 * Wed May 29 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc1.e0cce98fe279.19]
