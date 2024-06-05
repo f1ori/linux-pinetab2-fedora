@@ -1,3 +1,9 @@
+* Wed Jun 05 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240605.25.vanilla]
+- import ark-infra from ark-infra-next-latest (67c70bc1060) (Thorsten Leemhuis)
+- net: ethernet: ti: Makefile: Add icssg_queues.o in TI_ICSSG_PRUETH_SR1 (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240605
+Resolves: 
+
 * Tue Jun 04 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc2.2ab795141095.25]
 - redhat/configs: Move CONFIG_BLK_CGROUP_IOCOST=y to common/generic (Waiman Long)
 - Turn on CONFIG_MFD_QCOM_PM8008 for Fedora aarch64 (Justin M. Forbes)
