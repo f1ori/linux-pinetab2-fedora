@@ -1,6 +1,6 @@
-* Wed Jun 05 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc2.20240605gt32f88d65.25.vanilla]
-- import ark-infra from ark-infra-mainline-latest (67c70bc1060) (Thorsten Leemhuis)
-- Linux v6.10.0-0.rc2.20240605gt32f88d65
+* Wed Jun 05 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc2.32f88d65f01b.26]
+- redhat/kernel.spec: keep extra modules in original directories (Jan Stancek)
+- Linux v6.10.0-0.rc2.32f88d65f01b
 Resolves: 
 
 * Tue Jun 04 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc2.2ab795141095.25]
