@@ -1,3 +1,9 @@
+* Thu Jun 06 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240606.26.vanilla]
+- import ark-infra from ark-infra-next-latest (3b9aeb8664c) (Thorsten Leemhuis)
+- net: ethernet: ti: Makefile: Add icssg_queues.o in TI_ICSSG_PRUETH_SR1 (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240606
+Resolves: 
+
 * Wed Jun 05 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc2.32f88d65f01b.26]
 - redhat/kernel.spec: keep extra modules in original directories (Jan Stancek)
 - Linux v6.10.0-0.rc2.32f88d65f01b
