@@ -1,3 +1,9 @@
+* Fri Jun 07 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240607.27.vanilla]
+- import ark-infra from ark-infra-next-latest (bb63d3162f3) (Thorsten Leemhuis)
+- net: ti: icssg-prueth: Split out common object into module (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240607
+Resolves: 
+
 * Thu Jun 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc2.2df0193e62cf.27]
 - redhat: add missing UKI_secureboot_cert hunk (Patrick Talbert)
 - Linux v6.10.0-0.rc2.2df0193e62cf
