@@ -1,3 +1,8 @@
+* Mon Jun 10 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc3.30.vanilla]
+- import ark-infra from ark-infra-mainline-latest (2ae252d2b76) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc3
+Resolves: 
+
 * Sun Jun 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc2.771ed66105de.30]
 - redhat/configs: fedora: Enable some drivers for IPU6 support (Hans de Goede)
 - Linux v6.10.0-0.rc2.771ed66105de
