@@ -1,3 +1,9 @@
+* Tue Jun 11 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240611.31.vanilla]
+- import ark-infra from ark-infra-next-latest (85df8c5667d) (Thorsten Leemhuis)
+- net: ti: icssg-prueth: Split out common object into module (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240611
+Resolves: 
+
 * Mon Jun 10 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc3.31]
 - Linux v6.10.0-0.rc3
 Resolves: 
