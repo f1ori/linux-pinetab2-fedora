@@ -1,3 +1,8 @@
+* Wed Jun 12 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc3.20240612gt2ef5971f.32.vanilla]
+- import ark-infra from ark-infra-mainline-latest (caddf41d2cd) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc3.20240612gt2ef5971f
+Resolves: 
+
 * Tue Jun 11 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc3.32]
 - gitlab-ci: do not merge ark-latest for gating pipelines for Rawhide (Michael Hofmann)
 - disable CONFIG_KVM_INTEL_PROVE_VE (Paolo Bonzini)
