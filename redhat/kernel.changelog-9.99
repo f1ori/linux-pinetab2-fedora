@@ -1,3 +1,8 @@
+* Thu Jun 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.5-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.9 (1285748fc02) (Thorsten Leemhuis)
+- Linux v6.9.5-0.rc1
+Resolves: 
+
 * Wed Jun 12 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.9.4-0]
 - Add libbpf workaround for F39 to patches (Justin M. Forbes)
 - Linux v6.9.4
