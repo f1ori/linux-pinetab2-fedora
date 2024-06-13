@@ -1,3 +1,8 @@
+* Thu Jun 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc3.20240613gt2ccbdf43.33.vanilla]
+- import ark-infra from ark-infra-mainline-latest (7dd13db4273) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc3.20240613gt2ccbdf43
+Resolves: 
+
 * Wed Jun 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc3.2ef5971ff345.33]
 - gitlab-ci: merge ark-latest before tagging cki-gating (Michael Hofmann)
 - Linux v6.10.0-0.rc3.2ef5971ff345
