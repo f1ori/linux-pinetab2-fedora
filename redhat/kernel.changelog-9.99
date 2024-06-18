@@ -1,3 +1,9 @@
+* Tue Jun 18 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240618.39.vanilla]
+- import ark-infra from ark-infra-next-latest (40e95328c1e) (Thorsten Leemhuis)
+- net: ti: icssg-prueth: Split out common object into module (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240618
+Resolves: 
+
 * Tue Jun 18 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.14d7c92f8df9.39]
 - redhat/configs: Disable CONFIG_NFP (Kamal Heib) [RHEL-36647]
 - Enable CONFIG_PWRSEQ_{SIMPLIE,EMMC} on aarch64 (Charles Mirabile)
