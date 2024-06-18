@@ -1,3 +1,9 @@
+* Tue Jun 18 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240617.38.vanilla]
+- import ark-infra from ark-infra-next-latest (4fe297a2fba) (Thorsten Leemhuis)
+- net: ti: icssg-prueth: Split out common object into module (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240617
+Resolves: 
+
 * Mon Jun 17 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.38]
 - Fix SERIAL_SC16IS7XX configs for Fedora (Justin M. Forbes)
 - Enable ALSA (CONFIG_SND) on aarch64 (Charles Mirabile) [RHEL-40411]
