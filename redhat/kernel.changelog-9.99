@@ -1,3 +1,8 @@
+* Wed Jun 19 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc4.20240619gt92e5605a.39.vanilla]
+- import ark-infra from ark-infra-mainline-latest (40e95328c1e) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc4.20240619gt92e5605a
+Resolves: 
+
 * Tue Jun 18 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.14d7c92f8df9.39]
 - redhat/configs: Disable CONFIG_NFP (Kamal Heib) [RHEL-36647]
 - Enable CONFIG_PWRSEQ_{SIMPLIE,EMMC} on aarch64 (Charles Mirabile)
