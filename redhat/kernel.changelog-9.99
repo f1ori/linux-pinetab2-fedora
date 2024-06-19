@@ -1,3 +1,9 @@
+* Wed Jun 19 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240619.40.vanilla]
+- import ark-infra from ark-infra-next-latest (f9f812a7b55) (Thorsten Leemhuis)
+- net: ti: icssg-prueth: Split out common object into module (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240619
+Resolves: 
+
 * Wed Jun 19 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.92e5605a199e.40]
 - redhat: make bnx2xx drivers unmaintained in rhel-10 (John Meneghini) [RHEL-36646 RHEL-41231]
 - Linux v6.10.0-0.rc4.92e5605a199e
