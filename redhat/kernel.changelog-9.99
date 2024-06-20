@@ -1,3 +1,8 @@
+* Thu Jun 20 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc4.20240620gte5b3efbe.40.vanilla]
+- import ark-infra from ark-infra-mainline-latest (f9f812a7b55) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc4.20240620gte5b3efbe
+Resolves: 
+
 * Wed Jun 19 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.92e5605a199e.40]
 - redhat: make bnx2xx drivers unmaintained in rhel-10 (John Meneghini) [RHEL-36646 RHEL-41231]
 - Linux v6.10.0-0.rc4.92e5605a199e
