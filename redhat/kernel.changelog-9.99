@@ -1,6 +1,6 @@
-* Fri Jun 21 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc4.20240621gt50736169.41.vanilla]
-- import ark-infra from ark-infra-mainline-latest (28d9dba9c52) (Thorsten Leemhuis)
-- Linux v6.10.0-0.rc4.20240621gt50736169
+* Fri Jun 21 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.50736169ecc8.42]
+- fedora: arm: Enable basic support for S32G-VNP-RDB3 board (Enric Balletbo i Serra)
+- Linux v6.10.0-0.rc4.50736169ecc8
 Resolves: 
 
 * Thu Jun 20 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc4.e5b3efbe1ab1.41]
