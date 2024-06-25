@@ -1,3 +1,8 @@
+* Tue Jun 25 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.7-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.9 (9997322ddb1) (Thorsten Leemhuis)
+- Linux v6.9.7-0.rc1
+Resolves: 
+
 * Fri Jun 21 2024 Augusto Caringi <acaringi@redhat.com> [6.9.6-0]
 - Linux v6.9.6
 Resolves: 
