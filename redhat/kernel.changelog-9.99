@@ -1,3 +1,8 @@
+* Thu Jun 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc5.20240627gtafcd4813.45.vanilla]
+- import ark-infra from ark-infra-mainline-latest (bac77cc8669) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc5.20240627gtafcd4813
+Resolves: 
+
 * Wed Jun 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc5.24ca36a562d6.45]
 - Turn on KASAN_HW_TAGS for Fedora aarch64 debug kernels (Justin M. Forbes)
 - Linux v6.10.0-0.rc5.24ca36a562d6
