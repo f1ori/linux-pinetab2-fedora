@@ -1,3 +1,11 @@
+* Fri Jun 28 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.0.next.20240627.46.vanilla]
+- import ark-infra from ark-infra-next-latest (7f02b10bec8) (Thorsten Leemhuis)
+- Revert "perf build: Use pkg-config for feature check for libtrace{event,fs}" (Thorsten Leemhuis)
+- Revert "perf build: Ensure libtraceevent and libtracefs versions have 3 components" (Thorsten Leemhuis)
+- net: ti: icssg-prueth: Split out common object into module (MD Danish Anwar)
+- Linux v6.10.0-0.0.next.20240627
+Resolves: 
+
 * Thu Jun 27 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc5.afcd48134c58.46]
 - redhat/scripts/filtermods.py: show all parent/child kmods in report (Jan Stancek)
 - redhat/kernel.spec: capture filtermods.py return code (Jan Stancek)
