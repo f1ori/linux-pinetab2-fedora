@@ -1,3 +1,8 @@
+* Sun Jun 30 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc5.20240630gt8282d5af.48.vanilla]
+- import ark-infra from ark-infra-mainline-latest (40ed2321878) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc5.20240630gt8282d5af
+Resolves: 
+
 * Sat Jun 29 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc5.de0a9f448633.48]
 - Turn on USB_SERIAL_F81232 for Fedora (Justin M. Forbes)
 - Linux v6.10.0-0.rc5.de0a9f448633
