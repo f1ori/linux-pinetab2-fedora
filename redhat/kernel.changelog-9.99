@@ -1,3 +1,8 @@
+* Tue Jul 02 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc6.20240702gt73e93150.50.vanilla]
+- import ark-infra from ark-infra-mainline-latest (ce3c37e1cfa) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc6.20240702gt73e93150
+Resolves: 
+
 * Mon Jul 01 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc6.50]
 - redhat/configs: Remove obsolete x86 CPU mitigations config files (Waiman Long)
 - redhat/configs: increase CONFIG_DEFAULT_MMAP_MIN_ADDR from 32K to 64K for aarch64 (Brian Masney)
