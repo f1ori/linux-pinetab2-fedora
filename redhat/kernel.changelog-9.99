@@ -1,6 +1,9 @@
-* Wed Jul 03 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc6.20240703gte9d22f7a.51.vanilla]
-- import ark-infra from ark-infra-mainline-latest (0dcec0e66e7) (Thorsten Leemhuis)
-- Linux v6.10.0-0.rc6.20240703gte9d22f7a
+* Wed Jul 03 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc6.e9d22f7a6655.53]
+- Add openssl-devel-engine as a buildrequirement. (Justin M. Forbes)
+Resolves: 
+
+* Wed Jul 03 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc6.e9d22f7a6655.52]
+- Linux v6.10.0-0.rc6.e9d22f7a6655
 Resolves: 
 
 * Tue Jul 02 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc6.1dfe225e9af5.51]
