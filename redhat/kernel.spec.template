@@ -730,7 +730,10 @@ BuildRequires: libnl3-devel
 %endif
 %endif
 %if %{with_tools} || %{signmodules} || %{signkernel}
-BuildRequires: openssl-devel openssl-devel-engine
+BuildRequires: openssl-devel
+%if 0%{?fedora} > 40
+BuildRequires: openssl-devel-engine
+%endif
 %endif
 %if %{with_bpftool}
 BuildRequires: python3-docutils
