@@ -1,3 +1,8 @@
+* Wed Jul 10 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc7.20240710gt34afb82a.59.vanilla]
+- import ark-infra from ark-infra-mainline-latest (0d51b59c6c2) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc7.20240710gt34afb82a
+Resolves: 
+
 * Tue Jul 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc7.4376e966ecb7.59]
 - not upstream: drop openssl ENGINE API usage (Jan Stancek)
 Resolves: 
