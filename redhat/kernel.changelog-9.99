@@ -1,5 +1,6 @@
-* Fri Jul 05 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.9.8-50.vanilla]
-- import ark-infra from ark-infra-stable-6.9 (4a74d89caaa) (Thorsten Leemhuis)
+* Fri Jul 05 2024 Augusto Caringi <acaringi@redhat.com> [6.9.8-0]
+- Add BugsFixed for 6.9 (Justin M. Forbes)
+- Turn on USB_SERIAL_F81232 for Fedora (Justin M. Forbes)
 - Linux v6.9.8
 Resolves: 
 
