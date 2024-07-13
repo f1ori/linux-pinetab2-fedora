@@ -1,3 +1,8 @@
+* Sat Jul 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.0-0.rc7.20240713gt528dd46d.62.vanilla]
+- import ark-infra from ark-infra-mainline-latest (1a692dfcad1) (Thorsten Leemhuis)
+- Linux v6.10.0-0.rc7.20240713gt528dd46d
+Resolves: 
+
 * Fri Jul 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.10.0-0.rc7.43db1e03c086.62]
 - fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
