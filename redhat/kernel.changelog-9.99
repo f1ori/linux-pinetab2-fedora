@@ -1,3 +1,13 @@
+* Wed Jul 17 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240717.2.vanilla]
+- import ark-infra from ark-infra-next-latest (0273b5d591f) (Thorsten Leemhuis)
+- tools/latency: Use pkg-config in lib_setup of Makefile.config (Guilherme Amadio)
+- tools/rtla: Use pkg-config in lib_setup of Makefile.config (Guilherme Amadio)
+- tools/verification: Use pkg-config in lib_setup of Makefile.config (Guilherme Amadio)
+- tools: Make pkg-config dependency checks usable by other tools (Guilherme Amadio)
+- perf build: Warn if libtracefs is not found (Guilherme Amadio)
+- Linux v6.11.0-0.0.next.20240717
+Resolves: 
+
 * Tue Jul 16 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.d67978318827.2]
 - Reset RHEL_RELEASE for the 6.11 cycle (Justin M. Forbes)
 - redhat/configs: Enable CONFIG_VMWARE_VMCI/CONFIG_VMWARE_VMCI_VSOCKETS for RHEL (Vitaly Kuznetsov)
