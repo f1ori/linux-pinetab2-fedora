@@ -1,3 +1,13 @@
+* Thu Jul 18 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240718.5.vanilla]
+- import ark-infra from ark-infra-next-latest (b5948d992e5) (Thorsten Leemhuis)
+- tools/latency: Use pkg-config in lib_setup of Makefile.config (Guilherme Amadio)
+- tools/rtla: Use pkg-config in lib_setup of Makefile.config (Guilherme Amadio)
+- tools/verification: Use pkg-config in lib_setup of Makefile.config (Guilherme Amadio)
+- tools: Make pkg-config dependency checks usable by other tools (Guilherme Amadio)
+- perf build: Warn if libtracefs is not found (Guilherme Amadio)
+- Linux v6.11.0-0.0.next.20240718
+Resolves: 
+
 * Wed Jul 17 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.51835949dda3.5]
 - fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
