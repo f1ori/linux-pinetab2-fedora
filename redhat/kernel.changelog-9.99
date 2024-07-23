@@ -1,10 +1,17 @@
-* Mon Jul 22 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc0.20240722gt93306970.8.vanilla]
-- import ark-infra from ark-infra-mainline-latest (20d64d1bdb3) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc0.20240722gt93306970
+* Mon Jul 22 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.933069701c1b.10]
+- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
 
-* Sat Jul 20 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.720261cfc732.8]
-- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
+* Mon Jul 22 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.933069701c1b.9]
+- Fix up config mismatches in pending (Justin M. Forbes)
+- redhat/configs: Enable watchdog devices modelled by qemu (Richard W.M. Jones) [RHEL-40937]
+- Linux v6.11.0-0.rc0.933069701c1b
+Resolves: RHEL-40937
+
+* Mon Jul 22 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.720261cfc732.8]
+- rhel: cleanup unused media tuner configs (Peter Robinson)
+- all: cleanup MEDIA_CONTROLLER options (Peter Robinson)
+- redhat: kernel.spec: add s390x to livepatching kselftest builds (Joe Lawrence)
 Resolves: 
 
 * Sat Jul 20 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.720261cfc732.7]
