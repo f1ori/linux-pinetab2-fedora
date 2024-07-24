@@ -1,10 +1,12 @@
-* Tue Jul 23 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc0.20240723gt66ebbdfd.10.vanilla]
-- import ark-infra from ark-infra-mainline-latest (d00f3a83ba3) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc0.20240723gt66ebbdfd
+* Tue Jul 23 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.66ebbdfdeb09.11]
+- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
 
-* Mon Jul 22 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.933069701c1b.10]
-- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
+* Tue Jul 23 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.66ebbdfdeb09.10]
+- redhat/configs: enable some RTCs for RHEL on aarch64 (Luiz Capitulino)
+- redhat/configs: enable some regulators for RHEL (Luiz Capitulino)
+- redhat/config: disable CXL and CXLFLASH drivers (Dan Horák)
+- Linux v6.11.0-0.rc0.66ebbdfdeb09
 Resolves: 
 
 * Mon Jul 22 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.933069701c1b.9]
