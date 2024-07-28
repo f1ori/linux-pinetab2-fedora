@@ -1,10 +1,10 @@
-* Sat Jul 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc0.20240727gt3a7e02c0.14.vanilla]
-- import ark-infra from ark-infra-mainline-latest (3af2aba85f6) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc0.20240727gt3a7e02c0
+* Sat Jul 27 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.3a7e02c040b1.15]
+- rh_flags: constify the ctl_table argument of proc_handler (Scott Weaver)
+- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
 
-* Fri Jul 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.1722389b0d86.14]
-- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
+* Sat Jul 27 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.3a7e02c040b1.14]
+- Linux v6.11.0-0.rc0.3a7e02c040b1
 Resolves: 
 
 * Fri Jul 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc0.1722389b0d86.13]
