@@ -1,10 +1,12 @@
-* Tue Aug 06 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc2.20240806gtb446a2da.23.vanilla]
-- import ark-infra from ark-infra-mainline-latest (e98f3912bfd) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc2.20240806gtb446a2da
+* Tue Aug 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc2.b446a2dae984.24]
+- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
 
-* Mon Aug 05 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc2.23]
-- fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
+* Tue Aug 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc2.b446a2dae984.23]
+- redhat/configs: Disable gfs2 in rhel configs (Andrew Price)
+- redhat/uki_addons/virt: add common FIPS addon (Emanuele Giuseppe Esposito)
+- redhat/kernel.spec: add uki_addons to create UKI kernel cmdline addons (Emanuele Giuseppe Esposito)
+- Linux v6.11.0-0.rc2.b446a2dae984
 Resolves: 
 
 * Mon Aug 05 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc2.22]
