@@ -1,3 +1,9 @@
+* Mon Aug 12 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240812.29.vanilla]
+- import ark-infra from ark-infra-next-latest (de7acc01ab2) (Thorsten Leemhuis)
+- Revert "tools build: Avoid circular .fixdep-in.o.cmd issues" (Thorsten Leemhuis)
+- Linux v6.11.0-0.0.next.20240812
+Resolves: 
+
 * Sun Aug 11 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc2.5189dafa4cf9.29]
 - fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
