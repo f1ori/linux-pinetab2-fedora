@@ -1,5 +1,6 @@
-* Sun Aug 11 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.4-50.vanilla]
-- import ark-infra from ark-infra-stable-6.10 (85158b60e68) (Thorsten Leemhuis)
+* Sun Aug 11 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.10.4-0]
+- wifi: brcmfmac: cfg80211: Handle SSID based pmksa deletion (Janne Grunau)
+- New config for 6.10.3 (Justin M. Forbes)
 - Linux v6.10.4
 Resolves: 
 
