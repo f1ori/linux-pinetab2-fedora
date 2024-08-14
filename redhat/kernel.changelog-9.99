@@ -1,3 +1,9 @@
+* Wed Aug 14 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240814.31.vanilla]
+- import ark-infra from ark-infra-next-latest (55919cb1fa3) (Thorsten Leemhuis)
+- tools build: Respect HOSTCFLAGS in 'fixdep' compilation (Brian Norris)
+- Linux v6.11.0-0.0.next.20240814
+Resolves: 
+
 * Tue Aug 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc3.d74da846046a.31]
 - fedora: disable CONFIG_DRM_WERROR (Patrick Talbert)
 Resolves: 
