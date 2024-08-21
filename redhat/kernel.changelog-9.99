@@ -1,3 +1,8 @@
+* Wed Aug 21 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240821.38.vanilla]
+- import ark-infra from ark-infra-next-latest (34be7f0989b) (Thorsten Leemhuis)
+- Linux v6.11.0-0.0.next.20240821
+Resolves: 
+
 * Tue Aug 20 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc4.6e4436539ae1.38]
 - Add weakdep support to the kernel spec (Justin M. Forbes)
 Resolves: 
