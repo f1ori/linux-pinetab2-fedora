@@ -1,3 +1,8 @@
+* Mon Aug 26 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240826.43.vanilla]
+- import ark-infra from ark-infra-next-latest (114cd18b7ef) (Thorsten Leemhuis)
+- Linux v6.11.0-0.0.next.20240826
+Resolves: 
+
 * Sun Aug 25 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc5.43]
 - Revert "pidfd: prevent creation of pidfds for kthreads" (Christian Brauner)
 - Add weakdep support to the kernel spec (Justin M. Forbes)
