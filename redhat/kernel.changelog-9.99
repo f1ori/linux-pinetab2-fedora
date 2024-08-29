@@ -1,5 +1,6 @@
-* Mon Aug 19 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.6-50.vanilla]
-- import ark-infra from ark-infra-stable-6.10 (66eef0e237d) (Thorsten Leemhuis)
+* Mon Aug 19 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.10.6-0]
+- Add to BugsFixed (Justin M. Forbes)
+- selinux: revert our use of vma_is_initial_heap() (Paul Moore)
 - Linux v6.10.6
 Resolves: 
 
