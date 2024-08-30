@@ -1,6 +1,6 @@
-* Thu Aug 29 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc5.20240829gtd5d547aa.45.vanilla]
-- import ark-infra from ark-infra-mainline-latest (e65bbaabb19) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc5.20240829gtd5d547aa
+* Thu Aug 29 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc5.d5d547aa7b51.46]
+- redhat/configs: Microchip lan743x driver (Izabela Bakollari)
+- Linux v6.11.0-0.rc5.d5d547aa7b51
 Resolves: 
 
 * Wed Aug 28 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc5.86987d84b968.45]
