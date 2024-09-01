@@ -1,3 +1,8 @@
+* Sun Sep 01 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.8-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.10 (a866888bd5b) (Thorsten Leemhuis)
+- Linux v6.10.8-0.rc1
+Resolves: 
+
 * Thu Aug 29 2024 Augusto Caringi <acaringi@redhat.com> [6.10.7-0]
 - KVM: PPC: Book3S HV nestedv2: Keep nested guest HASHPKEYR in sync (Shivaprasad G Bhat)
 - KVM: PPC: Book3S HV: Add one-reg interface for HASHPKEYR register (Shivaprasad G Bhat)
