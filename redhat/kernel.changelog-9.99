@@ -1,5 +1,6 @@
-* Wed Sep 04 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.8-50.vanilla]
-- import ark-infra from ark-infra-stable-6.10 (a866888bd5b) (Thorsten Leemhuis)
+* Wed Sep 04 2024 Augusto Caringi <acaringi@redhat.com> [6.10.8-0]
+- Add to BugsFixed (Augusto Caringi)
+- xfs: xfs_finobt_count_blocks() walks the wrong btree (Dave Chinner)
 - Linux v6.10.8
 Resolves: 
 
