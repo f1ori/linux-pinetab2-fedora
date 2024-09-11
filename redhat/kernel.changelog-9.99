@@ -1,3 +1,8 @@
+* Wed Sep 11 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240911.57.vanilla]
+- import ark-infra from ark-infra-next-latest (d1dc70b4936) (Thorsten Leemhuis)
+- Linux v6.11.0-0.0.next.20240911
+Resolves: 
+
 * Tue Sep 10 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.bc83b4d1f086.57]
 - fedora/configs: Enable SCMI configuration (Rupinderjit Singh)
 - Remove S390 special config for PHYLIB (Justin M. Forbes)
