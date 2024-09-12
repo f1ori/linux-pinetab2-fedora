@@ -1,3 +1,8 @@
+* Thu Sep 12 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240912.58.vanilla]
+- import ark-infra from ark-infra-next-latest (734fc1fed85) (Thorsten Leemhuis)
+- Linux v6.11.0-0.0.next.20240912
+Resolves: 
+
 * Wed Sep 11 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.8d8d276ba2fb.58]
 - Cleanup some riscv CONFIG locations (Justin M. Forbes)
 - Fix up pending riscv Fedora configs post merge (Justin M. Forbes)
