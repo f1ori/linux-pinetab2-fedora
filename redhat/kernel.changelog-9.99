@@ -1,3 +1,8 @@
+* Fri Sep 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.0.next.20240913.59.vanilla]
+- import ark-infra from ark-infra-next-latest (4cafe7d2330) (Thorsten Leemhuis)
+- Linux v6.11.0-0.0.next.20240913
+Resolves: 
+
 * Thu Sep 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.77f587896757.59]
 - gitlab-ci: allow failure of clang LTO pipelines (Michael Hofmann)
 - redhat/configs: Consolidate the CONFIG_KVM_BOOK3S_HV_P*_TIMING switches (Thomas Huth)
