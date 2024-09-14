@@ -1,6 +1,12 @@
-* Fri Sep 13 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc7.20240913gt196145c6.59.vanilla]
-- import ark-infra from ark-infra-mainline-latest (efcf6a4a0aa) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc7.20240913gt196145c6
+* Fri Sep 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.196145c606d0.60]
+- uki-virt: add systemd-cryptsetup module (Vitaly Kuznetsov)
+- redhat/docs: fix command to install missing build dependencies (Davide Cavalca)
+- spec: Respect rpmbuild --without debuginfo (Orgad Shaneh)
+- fedora/configs: enable GPIO expander drivers (Rupinderjit Singh)
+- redhat/configs: Switch to the Rust implementation of AX88796B_PHY driver for Fedora (Neal Gompa)
+- redhat: Turn on support for Rust code in Fedora (Neal Gompa)
+- Turn off RUST for risc-v (Justin M. Forbes)
+- Linux v6.11.0-0.rc7.196145c606d0
 Resolves: 
 
 * Thu Sep 12 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.77f587896757.59]
