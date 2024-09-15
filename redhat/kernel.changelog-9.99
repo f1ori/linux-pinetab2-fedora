@@ -1,6 +1,5 @@
-* Sun Sep 15 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.0-0.rc7.20240915gt0babf683.61.vanilla]
-- import ark-infra from ark-infra-mainline-latest (6aff3402a35) (Thorsten Leemhuis)
-- Linux v6.11.0-0.rc7.20240915gt0babf683
+* Sun Sep 15 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.d42f7708e27c.62]
+- Linux v6.11.0-0.rc7.d42f7708e27c
 Resolves: 
 
 * Sat Sep 14 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.11.0-0.rc7.b7718454f937.61]
