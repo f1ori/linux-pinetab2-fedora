@@ -1,3 +1,8 @@
+* Wed Sep 18 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.0.next.20240918.4.vanilla]
+- import ark-infra from ark-infra-next-latest (fe55500ca03) (Thorsten Leemhuis)
+- Linux v6.12.0-0.0.next.20240918
+Resolves: 
+
 * Tue Sep 17 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc0.a940d9a43e62.4]
 - redhat: fix bad merge (Patrick Talbert)
 - Linux v6.12.0-0.rc0.a940d9a43e62
