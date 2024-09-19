@@ -1,3 +1,8 @@
+* Thu Sep 19 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.0.next.20240919.6.vanilla]
+- import ark-infra from ark-infra-next-latest (59985d9b289) (Thorsten Leemhuis)
+- Linux v6.12.0-0.0.next.20240919
+Resolves: 
+
 * Wed Sep 18 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc0.4a39ac5b7d62.6]
 - powerpc: temporary assembler fix (Patrick Talbert)
 Resolves: 
