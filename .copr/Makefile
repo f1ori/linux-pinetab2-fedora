@@ -1,5 +1,5 @@
 srpm:
-	dnf -y install git make gcc flex bison bzip2 xz rpm-build python3-pyyaml
+	dnf -y install git make gcc flex bison bzip2 dwarves xz rpm-build python3-pyyaml
 	git config user.email "fedora@leemhuis.info"
 	git config user.name "Thorsten Leemhuis"
 	.copr/deepen_gittree.sh
