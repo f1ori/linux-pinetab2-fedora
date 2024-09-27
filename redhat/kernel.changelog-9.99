@@ -1,3 +1,8 @@
+* Fri Sep 27 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.0.next.20240927.13.vanilla]
+- import ark-infra from ark-infra-next-latest (965c25b2fa0) (Thorsten Leemhuis)
+- Linux v6.12.0-0.0.next.20240927
+Resolves: 
+
 * Thu Sep 26 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc0.11a299a7933e.13]
 - [fedora] configs: add end of file newline to CONFIG_DMADEVICES_VDEBUG (Patrick Talbert)
 - unset CONFIG_DMADEVICES_VDEBUG (cmurf)
