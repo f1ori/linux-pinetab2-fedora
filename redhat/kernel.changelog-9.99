@@ -1,11 +1,3 @@
-* Mon Sep 30 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.1-50.vanilla]
-- import ark-infra from ark-infra-stable-6.11 (64688b34a49) (Thorsten Leemhuis)
-- sign-file,extract-cert: use pkcs11 provider for OPENSSL MAJOR >= 3 (Jan Stancek)
-- sign-file,extract-cert: avoid using deprecated ERR_get_error_line() (Jan Stancek)
-- sign-file,extract-cert: move common SSL helper functions to a header (Jan Stancek)
-- Linux v6.11.1
-Resolves: 
-
 * Tue Sep 24 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.11.0-0]
 - Initial set up for stable Fedora branch (Justin M. Forbes)
 - Reset RHEL_RELEASE for 6.12 (Justin M. Forbes)
