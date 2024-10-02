@@ -1,3 +1,11 @@
+* Wed Oct 02 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.2-0.rc1.50.vanilla]
+- import ark-infra from ark-infra-stable-6.11 (39da51d03e9) (Thorsten Leemhuis)
+- sign-file,extract-cert: use pkcs11 provider for OPENSSL MAJOR >= 3 (Jan Stancek)
+- sign-file,extract-cert: avoid using deprecated ERR_get_error_line() (Jan Stancek)
+- sign-file,extract-cert: move common SSL helper functions to a header (Jan Stancek)
+- Linux v6.11.2-0.rc1
+Resolves: 
+
 * Mon Sep 30 2024 Justin M. Forbes <jforbes@fedoraproject.org> [6.11.1-0]
 - media: qcom: camss: Fix ordering of pm_runtime_enable (Bryan O'Donoghue)
 - media: qcom: camss: Remove use_count guard in stop_streaming (Bryan O'Donoghue)
