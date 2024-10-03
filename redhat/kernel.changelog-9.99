@@ -1,6 +1,10 @@
-* Tue Oct 01 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.rc1.20241001gte32cde8d.17.vanilla]
-- import ark-infra from ark-infra-mainline-latest (471357ba6dd) (Thorsten Leemhuis)
-- Linux v6.12.0-0.rc1.20241001gte32cde8d
+* Wed Oct 02 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.e32cde8d2bd7.19]
+- redhat/configs: new config in arch/s390 (Izabela Bakollari)
+Resolves: 
+
+* Tue Oct 01 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.e32cde8d2bd7.18]
+- redhat: ignore rpminspect runpath report on selftests/bpf/cpuv4/urandom_read (Viktor Malik)
+- Linux v6.12.0-0.rc1.e32cde8d2bd7
 Resolves: 
 
 * Mon Sep 30 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.17]
