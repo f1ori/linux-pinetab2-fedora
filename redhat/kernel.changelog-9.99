@@ -1,5 +1,4 @@
-* Mon Sep 30 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.10.12-50.vanilla]
-- import ark-infra from ark-infra-stable-6.10 (5b172893243) (Thorsten Leemhuis)
+* Mon Sep 30 2024 Augusto Caringi <acaringi@redhat.com> [6.10.12-0]
 - Linux v6.10.12
 Resolves: 
 
