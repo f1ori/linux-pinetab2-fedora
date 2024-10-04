@@ -1,3 +1,8 @@
+* Fri Oct 04 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.rc1.20241004gt0c559323.20.vanilla]
+- import ark-infra from ark-infra-mainline-latest (b9940fe8fb5) (Thorsten Leemhuis)
+- Linux v6.12.0-0.rc1.20241004gt0c559323
+Resolves: 
+
 * Thu Oct 03 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.e32cde8d2bd7.20]
 - CONFIG_OF_OVERLAY: enable for aarch64 and powerpc (Scott Weaver)
 - redhat: enable changes to build rt variants (Clark Williams)
