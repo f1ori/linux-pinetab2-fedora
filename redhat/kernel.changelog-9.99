@@ -1,3 +1,20 @@
+* Mon Oct 07 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc2.24]
+- Linux v6.12.0-0.rc2
+Resolves: 
+
+* Sun Oct 06 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.8f602276d390.23]
+- Linux v6.12.0-0.rc1.8f602276d390
+Resolves: 
+
+* Sat Oct 05 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.27cc6fdf7201.22]
+- Linux v6.12.0-0.rc1.27cc6fdf7201
+Resolves: 
+
+* Fri Oct 04 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.0c559323bbaa.21]
+- configs for RT deps (Clark Williams)
+- Linux v6.12.0-0.rc1.0c559323bbaa
+Resolves: 
+
 * Thu Oct 03 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc1.e32cde8d2bd7.20]
 - CONFIG_OF_OVERLAY: enable for aarch64 and powerpc (Scott Weaver)
 - redhat: enable changes to build rt variants (Clark Williams)
