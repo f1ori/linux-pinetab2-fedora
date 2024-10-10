@@ -1,6 +1,6 @@
-* Wed Oct 09 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.rc2.20241009gt75b607fa.25.vanilla]
-- import ark-infra from ark-infra-mainline-latest (592bc86bf43) (Thorsten Leemhuis)
-- Linux v6.12.0-0.rc2.20241009gt75b607fa
+* Wed Oct 09 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc2.75b607fab38d.26]
+- Turn on ZRAM_WRITEBACK for Fedora (Justin M. Forbes)
+- Linux v6.12.0-0.rc2.75b607fab38d
 Resolves: 
 
 * Tue Oct 08 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc2.87d6aab2389e.25]
