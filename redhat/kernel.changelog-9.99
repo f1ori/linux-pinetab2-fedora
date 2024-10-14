@@ -1,3 +1,10 @@
+* Mon Oct 14 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.12.0-0.0.next.20241014.30.vanilla]
+- import ark-infra from ark-infra-next-latest (ae0d38aae6d) (Thorsten Leemhuis)
+- tools/rtla: fix collision with glibc sched_attr/sched_set_attr (Jan Stancek)
+- tools/rtla: drop __NR_sched_getattr (Jan Stancek)
+- Linux v6.12.0-0.0.next.20241014
+Resolves: 
+
 * Sun Oct 13 2024 Fedora Kernel Team <kernel-team@fedoraproject.org> [6.12.0-0.rc2.36c254515dc6.30]
 - Linux v6.12.0-0.rc2.36c254515dc6
 Resolves: 
