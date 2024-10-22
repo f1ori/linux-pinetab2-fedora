@@ -1,5 +1,5 @@
-* Thu Oct 17 2024 Thorsten Leemhuis <fedora@leemhuis.info> [6.11.4-50.vanilla]
-- import ark-infra from ark-infra-stable-6.11 (7f7a10adc27) (Thorsten Leemhuis)
+* Thu Oct 17 2024 Augusto Caringi <acaringi@redhat.com> [6.11.4-0]
+- Add F39 and F40 to release_targets (Justin M. Forbes)
 - Linux v6.11.4
 Resolves: 
 
