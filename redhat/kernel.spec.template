@@ -175,6 +175,8 @@ Summary: The Linux kernel
 
 # adjustments for kernel-vanilla builds
 #
+%define packager Thorsten Leemhuis https://fedoraproject.org/wiki/Kernel_Vanilla_Repositories
+#
 %define arkupstreambuild %%ARKUPSTREAMBUILD%%
 #
 %define arkbuild %%ARKBUILD%%
