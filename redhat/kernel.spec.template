@@ -163,29 +163,15 @@ Summary: The Linux kernel
 %define specrpmversion %%SPECRPMVERSION%%
 %define specversion %%SPECVERSION%%
 %define patchversion %%SPECKVERSION%%.%%SPECKPATCHLEVEL%%
-#%%define pkgrelease %%SPECBUILD%%
+%define pkgrelease %%SPECBUILD%%
 %define kversion %%SPECKVERSION%%
 %define tarfile_release %%SPECTARFILE_RELEASE%%
 # This is needed to do merge window version magic
 %define patchlevel %%SPECKPATCHLEVEL%%
 # This allows pkg_release to have configurable %%{?dist} tag
-#%%define specrelease %%SPECRELEASE%%
+%define specrelease %%SPECRELEASE%%
 # This defines the kabi tarball version
 %define kabiversion %%SPECKABIVERSION%%
-
-# adjustments for kernel-vanilla builds
-#
-%define arkupstreambuild %%ARKUPSTREAMBUILD%%
-#
-%define arkbuild %%ARKBUILD%%
-%if 0%{?fedora}
-%define distbuildid %{lua: print(rpm.expand("%{arkbuild}") + (rpm.expand("%{fedora}") - 37 ) * 100)}
-%endif
-#
-%define pkgrelease %{?arkupstreambuild}%{distbuildid}%{buildid}
-%define specrelease %{?arkupstreambuild}%{distbuildid}%{?buildid}%{?dist}
-#
-# end of adjustments for kernel-vanilla builds
 
 # If this variable is set to 1, a bpf selftests build failure will cause a
 # fatal kernel package build error
