@@ -241,19 +241,19 @@ Summary: The Linux kernel
 %define with_headers   %{?_without_headers:   0} %{?!_without_headers:   1}
 %define with_cross_headers   %{?_without_cross_headers:   0} %{?!_without_cross_headers:   1}
 # perf
-%define with_perf      %{?_without_perf:      0} %{?!_without_perf:      1}
+%define with_perf      %{?_with_perf:         1} %{?!_with_perf:         0}
 # libperf
-%define with_libperf   %{?_without_libperf:   0} %{?!_without_libperf:   1}
+%define with_libperf   %{?_with_libperf:      1} %{?!_with_libperf:      0}
 # tools
-%define with_tools     %{?_without_tools:     0} %{?!_without_tools:     1}
+%define with_tools     %{?_with_tools:        1} %{?!_with_tools:        0}
 # bpf tool
-%define with_bpftool   %{?_without_bpftool:   0} %{?!_without_bpftool:   1}
+%define with_bpftool   %{?_with_bpftool:      1} %{?!_without_bpftool:   0}
 # kernel-debuginfo
 %define with_debuginfo %{?_without_debuginfo: 0} %{?!_without_debuginfo: 1}
 # kernel-abi-stablelists
 %define with_kernel_abi_stablelists %{?_without_kernel_abi_stablelists: 0} %{?!_without_kernel_abi_stablelists: 1}
 # internal samples and selftests
-%define with_selftests %{?_without_selftests: 0} %{?!_without_selftests: 1}
+%define with_selftests %{?_with_selftests:    1} %{?!_with_selftests:    0}
 #
 # Additional options for user-friendly one-off kernel building:
 #
